@@ -1,0 +1,76 @@
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+        <img src="{{ asset('AdminLTE/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+        <span class="brand-text font-weight-light">Cake-Baker Store</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user panel (optional) -->
+    <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <li class="nav-item">
+                    <a href="{{ route('user.list') }}" class="nav-link active">
+                        <i class="nav-icon fas fa-users"></i>
+                        <p>Quản Lý Người Dùng</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('role.list') }}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Quản Lý Chức Vụ
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item menu-open">
+                    <a href="" class="nav-link ">
+                        <i class="nav-icon fas fa-user"></i>
+                        <p>Quản Lý Khách Hàng</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Danh Sách Sản Phẩm
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('category.list') }}" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>Danh Sách Thể Loại</p>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>
+                            Danh Sách Đơn Hàng
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+
+                </li>
+                <li class="nav-item">
+                    <a href="" class="nav-link">
+                        <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        <p>Đăng Xuất</p>
+                    </a>
+
+                </li>
+
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+</aside>
