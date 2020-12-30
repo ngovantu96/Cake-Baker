@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Thêm Mới Khách Hàng</h1>
+                    <h1>Chỉnh Sửa Khách Hàng</h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
@@ -25,9 +25,6 @@
                             <div class="col-12 col-md-12">
                                 <div class="row">
                                     <div class="col-12">
-                                        <h1>Chỉnh Sửa Khách Hàng</h1>
-                                    </div>
-                                    <div class="col-12">
                                         <form method="post" action="{{ route('customer.update',$customer->id) }}" >
                                             @csrf
                                             <div class="row">
@@ -46,8 +43,10 @@
                                                     @error('name')
                                                     <p class="alert alert-danger">{{ $message }}</p>
                                                     @enderror
+                                                </div>
+                                                <div class="col-6">
                                                     <div class="form-group">
-                                                        <label for="phone">Số Điện Thoai</label>
+                                                        <label for="phone">Số Điện Thoại</label>
                                                         <input type="text" class="form-control" name="phone" value="{{ $customer->phone }}" placeholder="Enter phone" required>
                                                     </div>
                                                     @error('name')

@@ -3,12 +3,21 @@
   <component name="ChangeListManager">
     <list default="true" id="2c9d668f-16c1-423c-9d65-89547ff4f235" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/Cake-Baker/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Cake-Baker/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CustomerController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/RoleController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/CustomerRepo/CustomerRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/CustomerRepo/CustomerRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Customer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/check-out.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/check-out.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/layout/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/layout/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/core/menu-left.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core/menu-left.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/customer/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/customer/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/customer/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/customer/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/customer/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/customer/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -174,7 +183,7 @@
       <workItem from="1609018349276" duration="31632000" />
       <workItem from="1609115408463" duration="33970000" />
       <workItem from="1609205619314" duration="32461000" />
-      <workItem from="1609278571920" duration="21426000" />
+      <workItem from="1609278571920" duration="28599000" />
     </task>
     <servers />
   </component>
@@ -205,6 +214,11 @@
           <url>file://$PROJECT_DIR$/resources/views/Cakebaker/layout/header.blade.php</url>
           <line>51</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/admin/customer/create.blade.php</url>
+          <line>33</line>
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

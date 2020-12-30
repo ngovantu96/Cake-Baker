@@ -4,6 +4,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckOutController;
+use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
@@ -76,6 +77,17 @@ Route::get('/order',function(){
         Route::post('/update/{id}',[UserController::class,'update'])->name('user.update');
         Route::get('/delete/{id}',[UserController::class,'delete'])->name('user.delete');
     });
+
+//    customer
+    Route::prefix('customer')->group(function(){
+        Route::get('/',[CustomerController::class,'index'])->name('customer.list');
+        Route::get('/show-create',[CustomerController::class,'showCreate'])->name('customer.create');
+        Route::post('/create',[CustomerController::class,'store'])->name('customer.store');
+        Route::get('/edit/{id}',[CustomerController::class,'edit'])->name('customer.edit');
+        Route::post('/update/{id}',[CustomerController::class,'update'])->name('customer.update');
+        Route::get('/delete/{id}',[CustomerController::class,'delete'])->name('customer.delete');
+    });
+
 //category
     Route::prefix('category')->group(function(){
         Route::get('/',[CategoryController::class,'index'])->name('category.list');

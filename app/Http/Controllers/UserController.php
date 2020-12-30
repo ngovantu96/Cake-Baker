@@ -24,11 +24,7 @@ class UserController extends Controller
     }
     public function store(Request $request){
         $this->userRepository->create($request);
-        $message = [
-            'message'=>'Thêm mới thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('user.list')->with($message);
+        return redirect()->route('user.list')->with('add','Thêm mới thành công');
     }
     public function edit($id){
         $user = $this->userRepository->findById($id);
@@ -38,19 +34,11 @@ class UserController extends Controller
     public function update(Request $request, $id){
         $user = $this->userRepository->findById($id);
         $this->userRepository->update($request, $user);
-        $message = [
-            'message'=>'Cập nhật thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('user.list')->with($message);
+        return redirect()->route('user.list')->with('update','Cập nhật thành công');
     }
     public function delete($id){
         $this->userRepository->delete($id);
-        $message = [
-            'message'=>'xóa thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('user.list')->with($message);
+        return redirect()->route('user.list')->with('add','Xóa Thành Công.!!');
 
     }
 }

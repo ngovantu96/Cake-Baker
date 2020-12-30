@@ -46,16 +46,18 @@
                                                     @error('name')
                                                     <p class="alert alert-danger">{{ $message }}</p>
                                                     @enderror
+                                                </div>
+                                                <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="phone">Số Điện Thoai</label>
-                                                        <input type="text" class="form-control" name="phone" placeholder="Enter phone" required>
+                                                        <input type="text" class="form-control" name="phone" placeholder="Số Điện Thoai" required>
                                                     </div>
                                                     @error('name')
                                                     <p class="alert alert-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="email">Email</label>
-                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" required>
+                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
                                                     </div>
                                                     @error('email')
                                                     <p class="alert alert-danger">{{ $message }}</p>

@@ -31,6 +31,10 @@
 
     <link href="{{ asset('Cake-Baker/css/style.css') }}" rel="stylesheet">
     <link href="{{ asset('Cake-Baker/css/responsive.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" />
+
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -94,7 +98,34 @@
 <script src="{{ asset('Cake-Baker/vendors/jquery-ui/jquery-ui.min.js') }}"></script>
 <script src="{{ asset('Cake-Baker/vendors/lightbox/simpleLightbox.min.js') }}"></script>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
+
+
 <script src="{{ asset('Cake-Baker/js/theme.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
+
+
+@if(Session::has('add'))
+    <script>
+        toastr.success("{!! Session::get('add') !!}")
+    </script>
+@endif
+@if(Session::has('update'))
+    <script>
+        toastr.success("{!! Session::get('update') !!}")
+    </script>
+@endif
+@if(Session::has('delete'))
+    <script>
+        toastr.success("{!! Session::get('delete') !!}")
+    </script>
+@endif
+@if(Session::has('error'))
+    <script>
+        toastr.success("{!! Session::get('error') !!}")
+    </script>
+@endif
+
 </body>
 
 </html>

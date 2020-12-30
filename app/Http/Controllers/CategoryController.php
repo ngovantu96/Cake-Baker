@@ -20,11 +20,7 @@ class CategoryController extends Controller
     }
     public function store(CategoryRequests $requets){
         $this->categoryRepository->create($requets);
-        $message = [
-            'message'=>'Thêm mới thành công',
-            'alert-type'=>'thành công',
-        ];
-        return redirect()->route('category.list')->with($message);
+        return redirect()->route('category.list')->with('add','Thêm Mới Thành Công !');
     }
     public function edit($id){
         $category = $this->categoryRepository->findById($id);
@@ -33,18 +29,10 @@ class CategoryController extends Controller
     public function update(CategoryRequests $requets, $id){
         $category = $this->categoryRepository->findById($id);
         $this->categoryRepository->update($requets, $category);
-        $message = [
-            'message'=>'Cập nhật thành công',
-            'alert-type'=>'Thành công'
-        ];
-        return redirect()->route('category.list')->with($message);
+        return redirect()->route('category.list')->with('update','Cập Nhật Thành Công !');
     }
     public function delete($id){
         $this->categoryRepository->delete($id);
-        $notification = [
-            'message'=>'Xóa thành công',
-            'alert-type'=>'Thành công'
-        ];
-        return redirect()->route('category.list')->with($notification);
+        return redirect()->route('category.list')->with('delete','Xóa Thành Công !');
     }
 }

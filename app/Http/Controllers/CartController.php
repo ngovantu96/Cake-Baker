@@ -16,7 +16,7 @@ class CartController extends Controller
             $newCart->AddCart($product, $id);
             $request->session()->put('Cart',$newCart);
         }
-        return redirect()->back()->with('them thanh cong');
+        return redirect()->back()->with('add','Thêm Mới thành công');
     }
     public function minusCart(Request $request, $id){
         $product = Product::findOrFail($id);
@@ -26,7 +26,7 @@ class CartController extends Controller
             $newCart->MinusCart($product, $id);
             $request->session()->put('Cart',$newCart);
         }
-        return redirect()->back()->with('them thanh cong');
+        return redirect()->back()->with('update','Cập nhật thành công');
     }
 
     public function showCart(){
@@ -42,7 +42,6 @@ class CartController extends Controller
         }else{
             $request->session()->forget('Cart');
         }
-
-        return redirect()->back();
+        return redirect()->back()->with('delete','Xóa thành công');
     }
 }

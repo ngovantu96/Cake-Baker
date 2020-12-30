@@ -24,11 +24,7 @@ class ProductController extends Controller
     public function store(Request $request)
     {
         $this->productRepository->store($request);
-        $message = [
-            'message'=>'Thêm mới thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('product.list')->with($message);
+        return redirect()->route('product.list')->with('add','Thêm mới thành công');
     }
     public function edit($id)
     {
@@ -40,19 +36,11 @@ class ProductController extends Controller
     {
         $product = $this->productRepository->findById($id);
         $this->productRepository->update($product);
-        $message = [
-            'message'=>'Thêm mới thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('product.list')->with($message);;
+        return redirect()->route('product.list')->with('update','Cập Nhật thành công');;
     }
     public function delete($id){
         $this->productRepository->delete($id);
-        $message = [
-            'message'=>'Thêm mới thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('product.list')->with($message);;
+        return redirect()->route('product.list')->with('delete','Xóa thành công');;
     }
 
     public function getCakeBaker(){

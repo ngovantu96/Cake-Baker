@@ -23,7 +23,7 @@
                     <div class="card">
                         <div class="card-header">
 
-                            <a href=""> <button type="button" class="btn btn-primary">
+                            <a href="{{ route('customer.create') }}"> <button type="button" class="btn btn-primary">
                                     Thêm Mới
                                 </button></a>
                         </div>
@@ -57,9 +57,9 @@
                                             <th scope="row">{{ ++$key }}</th>
                                             <td>{{ $customer->name }}</td>
                                             <td>{{ $customer->address }}</td>
-                                            <td>{{ $user->phone }}</td>
-                                            <td>{{ $user->email }}</td>
-                                            <td><a href="{{ route('customer.edit',$customer->id) }}"><button type="button" class="btn btn-warning">Sửa</button></a> ||
+                                            <td>{{ $customer->phone }}</td>
+                                            <td>{{ $customer->email }}</td>
+                                            <td><a href="{{ route('customer.edit',$customer->id) }}"><button type="button" class="btn btn-success">Sửa</button></a> ||
                                                 <a href="{{ route('customer.delete',$customer->id) }}"><button type="button" class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không ?')">Xóa</button></a></td>
                                     @endforeach
                                 @endif

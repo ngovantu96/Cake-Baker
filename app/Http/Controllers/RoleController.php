@@ -18,11 +18,7 @@ class RoleController extends Controller
     }
     public function store(RoleRequests $requets){
         $this->roleRepository->create($requets);
-        $notification = [
-            'message'=>'Thêm mới thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('role.list')->with($notification);
+        return redirect()->route('role.list')->with('add','Thêm mới thành công');
     }
     public function edit($id){
         $role = $this->roleRepository->findById($id);
@@ -31,18 +27,10 @@ class RoleController extends Controller
     public function update(RoleRequests $requets, $id){
         $role = $this->roleRepository->findById($id);
         $this->roleRepository->update($requets, $role);
-        $notification = [
-            'message'=>'Cập nhật thành công',
-            'alert-type'=>'Thành công'
-        ];
-        return redirect()->route('role.list')->with($notification);
+        return redirect()->route('role.list')->with('update','Cập nhật thành công');
     }
     public function delete($id){
         $this->roleRepository->delete($id);
-        $notification = [
-            'message'=>'Xóa thành công',
-            'alert-type'=>'Thành công'
-        ];
-        return redirect()->route('role.list')->with($notification);
+        return redirect()->route('role.list')->with('delete','Xóa thành công');
     }
 }

@@ -44,7 +44,7 @@
                             </div>
                         </td>
                         <td>{{ number_format( $item['price'])  }}đ</td>
-                        <td><a href="{{ route('delete.cart',$item['productInfo']->id) }}">X</a></td>
+                        <td><a href="{{ route('delete.cart',$item['productInfo']->id) }}" onclick="return confirm('bạn có muốn xóa không ?')">X</a></td>
                     </tr>
                     </tbody>
                     @endforeach

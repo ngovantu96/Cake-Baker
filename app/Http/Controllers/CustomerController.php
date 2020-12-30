@@ -18,38 +18,28 @@ class CustomerController extends Controller
         $customers = $this->customerRepository->getAll();
         return view('admin.customer.list',compact('customers'));
     }
+    public function showCreate(){
+        return view('admin.customer.create');
+    }
     public function store(Request $request)
     {
         $this->customerRepository->create($request);
-        $message = [
-            'message'=>'Thêm mới thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('customer.list')->with($message);
+        return redirect()->route('customer.list')->with('add','Thêm mới thành công');
     }
     public function edit($id)
     {
         $customer = $this->customerRepository->findById($id);
-        return view('admin.customer.edit',compact('customer');
+        return view('admin.customer.edit',compact('customer'));
     }
     public function update(Request $request, $id)
     {
         $customer = $this->customerRepository->findById($id);
         $this->customerRepository->update($request, $customer);
-        $message = [
-            'message'=>'Cập nhật thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('customer.list')->with($message);
+        return redirect()->route('customer.list')->with('update','Cập nhật thành công');
     }
     public function delete($id)
     {
-        $customer = $this->customerRepository->findById($id);
-        $this->customerRepository->delete($customer);
-        $message = [
-            'message'=>'Cập nhật thành công',
-            'alert-type'=>'thành công'
-        ];
-        return redirect()->route('customer.list')->with($message);
+        $this->customerRepository->delete($id);
+        return redirect()->route('customer.list')->with('delete','Xóa thành công');
     }
 }

@@ -28,7 +28,8 @@
     <!-- summernote -->
     <link rel="stylesheet" href="{{ asset('AdminLTE/plugins/summernote/summernote-bs4.min.css') }}">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" />
+
 
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -55,6 +56,8 @@
     $.widget.bridge('uibutton', $.ui.button);
 </script>
 <!-- Bootstrap 4 -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+
 <script src="{{ asset('AdminLTE/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 <!-- ChartJS -->
 <script src="{{ asset('AdminLTE/plugins/chart.js/Chart.min.js') }}"></script>
@@ -79,6 +82,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('AdminLTE/dist/js/demo.js') }}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous"></script>
 <script src="{{ asset('AdminLTE/dist/js/pages/dashboard.js') }}"></script>
 <script src="https://cdn.ckeditor.com/4.15.1/full/ckeditor.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
@@ -88,6 +92,27 @@
         $('#table').DataTable();
     });
 </script>
+
+@if(Session::has('add'))
+        <script>
+            toastr.success("{!! Session::get('add') !!}")
+        </script>
+@endif
+@if(Session::has('update'))
+    <script>
+        toastr.success("{!! Session::get('update') !!}")
+    </script>
+@endif
+@if(Session::has('delete'))
+    <script>
+        toastr.success("{!! Session::get('delete') !!}")
+    </script>
+@endif
+@if(Session::has('error'))
+    <script>
+        toastr.success("{!! Session::get('error') !!}")
+    </script>
+@endif
 
 
 </body>

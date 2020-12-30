@@ -28,7 +28,7 @@
 
                 </li>
                 <li class="nav-item menu-open">
-                    <a href="" class="nav-link ">
+                    <a href="{{ route('customer.list') }}" class="nav-link ">
                         <i class="nav-icon fas fa-user"></i>
                         <p>Quản Lý Khách Hàng</p>
                     </a>
