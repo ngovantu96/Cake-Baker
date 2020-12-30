@@ -34,30 +34,29 @@
                                                         <input type="text" class="form-control" name="name" value="{{ $customer->name }}" id="name" placeholder="họ và tên" required>
                                                     </div>
                                                     @error('name')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="address">Địa Chỉ</label>
                                                         <input type="text" class="form-control" name="address" value="{{ $customer->address }}" placeholder="địa chỉ" required>
                                                     </div>
-                                                    @error('name')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
-                                                    @enderror
+                                                    @error('address')
+                                                    <p class="text-danger">{{ $message }}</p>                                                    @enderror
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="phone">Số Điện Thoại</label>
                                                         <input type="text" class="form-control" name="phone" value="{{ $customer->phone }}" placeholder="Enter phone" required>
                                                     </div>
-                                                    @error('name')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    @error('phone')
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="email">Email</label>
                                                         <input type="email" class="form-control" name="email" value="{{ $customer->email }}" id="email" placeholder="Enter email" required>
                                                     </div>
                                                     @error('email')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                 </div>
                                             </div>

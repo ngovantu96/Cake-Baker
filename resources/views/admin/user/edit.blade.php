@@ -37,28 +37,28 @@
                                                         <input type="text" class="form-control" name="name" value="{{ $user->name }}" placeholder="Enter name" required>
                                                     </div>
                                                     @error('name')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="name">Tên Đăng Nhập</label>
                                                         <input type="text" class="form-control" name="username" value="{{ $user->username }}" placeholder="Enter username" required>
                                                     </div>
-                                                    @error('name')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    @error('username')
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="phone">Số Điện Thoai</label>
                                                         <input type="text" class="form-control" name="phone" value="{{ $user->phone }}" placeholder="Enter phone" required>
                                                     </div>
-                                                    @error('name')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    @error('phone')
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="email">Email</label>
                                                         <input type="email" class="form-control" name="email" value="{{ $user->email }}" placeholder="Enter email" required>
                                                     </div>
                                                     @error('email')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                 </div>
                                                 <div class="col-6">
@@ -67,21 +67,21 @@
                                                         <input type="password" class="form-control" name="password" value="{{ $user->password }}" placeholder="Enter password" required>
                                                     </div>
                                                     @error('password')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="address">Địa Chỉ</label>
                                                         <input type="text" class="form-control" name="address" value="{{ $user->address }}" placeholder="Enter address" required>
                                                     </div>
-                                                    @error('password')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    @error('address')
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="status">Trạng thái</label>
                                                         <input type="text" class="form-control" name="status" value="{{ $user->status }}"  placeholder="Enter status" required>
                                                     </div>
-                                                    @error('password')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    @error('status')
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label>Chức Vụ</label>

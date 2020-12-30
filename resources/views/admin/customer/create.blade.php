@@ -34,33 +34,33 @@
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="name">Họ Và Tên</label>
-                                                        <input type="text" class="form-control" name="name" id="name" placeholder="họ và tên" required>
+                                                        <input type="text" class="form-control" name="name" id="name" placeholder="họ và tên" >
                                                     </div>
                                                     @error('name')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="address">Địa Chỉ</label>
-                                                        <input type="text" class="form-control" name="address"  placeholder="địa chỉ" required>
+                                                        <input type="text" class="form-control" name="address"  placeholder="địa chỉ" >
                                                     </div>
-                                                    @error('name')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    @error('address')
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                 </div>
                                                 <div class="col-6">
                                                     <div class="form-group">
                                                         <label for="phone">Số Điện Thoai</label>
-                                                        <input type="text" class="form-control" name="phone" placeholder="Số Điện Thoai" required>
+                                                        <input type="text" class="form-control" name="phone" placeholder="Số Điện Thoai" >
                                                     </div>
-                                                    @error('name')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    @error('phone')
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                     <div class="form-group">
                                                         <label for="email">Email</label>
-                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                                                        <input type="email" class="form-control" name="email" id="email" placeholder="Email" >
                                                     </div>
                                                     @error('email')
-                                                    <p class="alert alert-danger">{{ $message }}</p>
+                                                    <p class="text-danger">{{ $message }}</p>
                                                     @enderror
                                                 </div>
                                             </div>

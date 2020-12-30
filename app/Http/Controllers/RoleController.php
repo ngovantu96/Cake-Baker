@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Repositories\RoleRepo\RoleRepositoryInterface;
-use App\Http\Requests\RoleRequests;
-use Illuminate\Http\Requests;
+use App\Http\Requests\RoleRequest;
 
 class RoleController extends Controller
 {
@@ -13,10 +12,11 @@ class RoleController extends Controller
         $this->roleRepository = $roleRepository;
     }
     public function index(){
+//        $messages = RoleRequest::all();
         $roles = $this->roleRepository->getAll();
         return view('admin.role.list',compact('roles'));
     }
-    public function store(RoleRequests $requets){
+    public function store(RoleRequest $requets){
         $this->roleRepository->create($requets);
         return redirect()->route('role.list')->with('add','Thêm mới thành công');
     }
@@ -24,7 +24,7 @@ class RoleController extends Controller
         $role = $this->roleRepository->findById($id);
         return view('role.edit',compact('role'));
     }
-    public function update(RoleRequests $requets, $id){
+    public function update(RoleRequest $requets, $id){
         $role = $this->roleRepository->findById($id);
         $this->roleRepository->update($requets, $role);
         return redirect()->route('role.list')->with('update','Cập nhật thành công');

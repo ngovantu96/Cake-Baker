@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Repositories\UserRepo\UserRepository;
 use App\Http\Repositories\UserRepo\UserRepositoryInterface;
+use App\Http\Requests\UserRequest;
 use App\Models\Role;
 use Illuminate\Http\Request;
 
@@ -22,7 +23,7 @@ class UserController extends Controller
         $roles = Role::all();
         return view('admin.user.create',compact('roles'));
     }
-    public function store(Request $request){
+    public function store(UserRequest $request){
         $this->userRepository->create($request);
         return redirect()->route('user.list')->with('add','Thêm mới thành công');
     }
@@ -31,7 +32,7 @@ class UserController extends Controller
         $roles = Role::all();
         return view('admin.user.edit',compact('user','roles'));
     }
-    public function update(Request $request, $id){
+    public function update(UserRequest $request, $id){
         $user = $this->userRepository->findById($id);
         $this->userRepository->update($request, $user);
         return redirect()->route('user.list')->with('update','Cập nhật thành công');

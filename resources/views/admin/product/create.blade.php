@@ -33,7 +33,7 @@
                                                       <label for="name">Tên Sản Phẩm</label>
                                                       <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" >
                                                       @error('name')
-                                                      <div class="alert alert-danger">{{ $message }}</div>
+                                                      <p class="text-danger">{{ $message }}</p>
                                                       @enderror
                                                   </div>
                                                   <div class="form-group">
@@ -43,53 +43,53 @@
                                                               <option value="{{ $categorie->id }}">{{ $categorie->name }}</option>
                                                           @endforeach
                                                       </select>
-                                                      @error('name')
-                                                      <div class="alert alert-danger">{{ $message }}</div>
-                                                      @enderror
                                                   </div>
                                                   <div class="form-group">
                                                       <label for="image">Ảnh Sản Phẩm</label>
                                                       <input type="file" class="form-control" name="image" >
+                                                      @error('image_product')
+                                                      <p class="text-danger">{{ $message }}</p>
+                                                      @enderror
                                                   </div>
                                                   <div class="form-group">
                                                       <label for="image">Ảnh Chi Tiết </label>
                                                       <input type="file" class="form-control" name="image_detail" >
+                                                      @error('image_detail')
+                                                      <p class="text-danger">{{ $message }}</p>
+                                                      @enderror
                                                   </div>
                                               </div>
                                               <div class="col-6">
                                                   <div class="form-group">
                                                       <label for="">Số Lượng</label>
                                                       <input type="number" class="form-control" name="quantity" min="0" >
+                                                      @error('quantity')
+                                                      <p class="text-danger">{{ $message }}</p>
+                                                      @enderror
                                                   </div>
                                                   <div class="form-group">
                                                       <label for="cost_price">Giá Nhập Vào</label>
                                                       <input type="text" class="form-control" name="cost_price"   >
-                                                      @error('name')
-                                                      <div class="alert alert-danger">{{ $message }}</div>
+                                                      @error('costPrice')
+                                                      <p class="text-danger">{{ $message }}</p>
                                                       @enderror
                                                   </div>
                                                   <div class="form-group">
                                                       <label for="price">Giá Bán Ra</label>
                                                       <input type="text" class="form-control" name="price"  >
-                                                      @error('name')
-                                                      <div class="alert alert-danger">{{ $message }}</div>
+                                                      @error('price')
+                                                      <p class="text-danger">{{ $message }}</p>
                                                       @enderror
                                                   </div>
                                                   <div class="form-group">
                                                       <label for="size">Kích Thước</label>
-                                                      <input type="text" class="form-control" name="size"  >
-                                                      @error('name')
-                                                      <div class="alert alert-danger">{{ $message }}</div>
-                                                      @enderror
+                                                      <input type="number" class="form-control" name="size"  >
                                                   </div>
                                               </div>
                                           </div>
                                             <div class="form-group">
                                                 <label>Mô Tả</label>
                                                 <textarea class="ckeditor" id="ckeditor" name="description"></textarea>
-                                                @error('name')
-                                                <div class="alert alert-danger">{{ $message }}</div>
-                                                @enderror
                                             </div>
                                             <button type="submit" class="btn btn-primary">Thêm Mới</button>
                                         </form>

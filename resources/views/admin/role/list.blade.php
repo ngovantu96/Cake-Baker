@@ -32,9 +32,9 @@
                         <div class="form-group">
                             <label for="name">Chức Vụ</label>
                             <input type="text" class="form-control" name="name" id="name" >
-                            @error('name')
-                            <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror
+{{--                            @error('name')--}}
+{{--                            <p class="text-danger">{{ $messages }}</p>--}}
+{{--                            @enderror--}}
                         </div>
 
                         <input type="submit" class="btn btn-primary" value="Lưu" >
@@ -61,11 +61,11 @@
                         </div>
 
                         <div class="col-12">
-                            @if (Session::has('success'))
-                                <p class="text-success">
-                                    <i class="fa fa-check" aria-hidden="true"></i>{{ Session::get('success') }}
-                                </p>
-                            @endif
+{{--                            @if (Session::has('success'))--}}
+{{--                                <p class="text-success">--}}
+{{--                                    <i class="fa fa-check" aria-hidden="true"></i>{{ Session::get('success') }}--}}
+{{--                                </p>--}}
+{{--                            @endif--}}
                         </div>
                         <!-- /.card-header -->
                         <div class="card-body">
@@ -102,9 +102,9 @@
                                                             <div class="form-group">
                                                                 <label for="name">Tên Chức Vụ </label>
                                                                 <input type="text" class="form-control" name="name" value="{{ $role->name }}" required>
-                                                                @error('name')
-                                                                <div class="alert alert-danger">{{ $message }}</div>
-                                                                @enderror
+{{--                                                                @error('name')--}}
+{{--                                                                <div class="alert alert-danger">{{ $message }}</div>--}}
+{{--                                                                @enderror--}}
                                                             </div>
 
                                                             <button type="submit" class="btn btn-primary">Cập Nhật</button>

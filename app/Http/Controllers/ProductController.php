@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Repositories\ProductRepo\ProductRepositoryInterface;
+use App\Http\Requests\ProductRequest;
 use App\Models\Category;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class ProductController extends Controller
         $categories = Category::all();
         return view('admin.product.create',compact('categories'));
     }
-    public function store(Request $request)
+    public function store(ProductRequest $request)
     {
         $this->productRepository->store($request);
         return redirect()->route('product.list')->with('add','Thêm mới thành công');
@@ -32,10 +33,10 @@ class ProductController extends Controller
         $product = $this->productRepository->findById($id);
         return view('admin.product.edit',compact('product','categories'));
     }
-    public function update($request, $id)
+    public function update(ProductRequest $request, $id)
     {
         $product = $this->productRepository->findById($id);
-        $this->productRepository->update($product);
+        $this->productRepository->update($request,$product);
         return redirect()->route('product.list')->with('update','Cập Nhật thành công');;
     }
     public function delete($id){

@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class CategoryRequests extends FormRequest
+class CategoryRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,5 +26,14 @@ class CategoryRequests extends FormRequest
         return [
             'name'=>'required|min:2|max:30',
         ];
+    }
+    public function messages()
+    {
+        $messages = [
+            'name.required'=>'tên thể loại không được để trống',
+            'name.min'=>'phải có ít nhất 2 kí tự.',
+            'name.max'=>'độ dài tối đa 30 kí tự',
+        ];
+        return $messages;
     }
 }

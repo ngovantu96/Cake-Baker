@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class RoleRequests extends FormRequest
+class RoleRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -26,5 +26,14 @@ class RoleRequests extends FormRequest
         return [
             'name'=>'required|min:2|max:30',
         ];
+    }
+    public function messages()
+    {
+        $messages = [
+          'name.required'=>'trường này không được để trống.',
+          'name.min'=>'phải có ít nhất 2 kí tự.',
+            'name.max'=>'cho phép tối đa 30 kí tự',
+        ];
+        return $messages;
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Repositories\CustomerRepo\CustomerRepository;
 use App\Http\Repositories\CustomerRepo\CustomerRepositoryInterface;
+use App\Http\Requests\CustomerRequest;
 use Illuminate\Http\Request;
 
 class CustomerController extends Controller
@@ -21,7 +22,7 @@ class CustomerController extends Controller
     public function showCreate(){
         return view('admin.customer.create');
     }
-    public function store(Request $request)
+    public function store(CustomerRequest $request)
     {
         $this->customerRepository->create($request);
         return redirect()->route('customer.list')->with('add','Thêm mới thành công');
@@ -31,7 +32,7 @@ class CustomerController extends Controller
         $customer = $this->customerRepository->findById($id);
         return view('admin.customer.edit',compact('customer'));
     }
-    public function update(Request $request, $id)
+    public function update(CustomerRequest $request, $id)
     {
         $customer = $this->customerRepository->findById($id);
         $this->customerRepository->update($request, $customer);
