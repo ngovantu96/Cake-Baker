@@ -14,7 +14,7 @@
                     <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                 </ul>
                 <ul class="h_search list_style">
-                    <li class="shop_cart"><a href="#"><i class="lnr lnr-cart"></i></a></li>
+                    <li class="shop_cart"><a href="{{ route('show.cart') }}"><i class="fas fa-cart-plus"></i></a><span class="qty-cart text-center">{{ session('Cart') ? session('Cart')->totalQuanty :  " " }}</span></li>
                     <li><a class="popup-with-zoom-anim" href="#test-search"><i class="fas fa-search"></i></a></li>
                 </ul>
             </div>
@@ -23,7 +23,7 @@
     <div class="main_menu_area">
         <div class="container">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand" href="{{route('home')}}">
                     <img src="{{ asset('Cake-Baker/img/logo.png') }}" alt="">
                     <img src="{{ asset('Cake-Baker/img/logo-2.png') }}" alt="">
                 </a>
@@ -36,16 +36,16 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
-                        <li class="active"><a  href="menu.html" >Trang Chủ</a></li>
+                        <li class="active"><a  href="{{ route('home') }}" >Trang Chủ</a></li>
                         <li><a href="cake.html">Giới Thiệu</a></li>
                         <li class="dropdown submenu">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sản Phẩm</a>
                             <ul class="dropdown-menu">
-                                <li><a href="index.html">Sản Phẩm</a></li>
-                                <li><a href="index-2.html">Home 2</a></li>
-                                <li><a href="index-3.html">Home 3</a></li>
-                                <li><a href="index-4.html">Home 4</a></li>
-                                <li><a href="index-5.html">Home 5</a></li>
+                                <li><a href="">Sản Phẩm</a></li>
+                                <li><a href="">Home 2</a></li>
+                                <li><a href="">Home 3</a></li>
+                                <li><a href="">Home 4</a></li>
+                                <li><a href="">Home 5</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -85,7 +85,7 @@
 {{--                                <li><a href="checkout.html">Checkout Page</a></li>--}}
 {{--                            </ul>--}}
                         </li>
-                        <li><a href="contact.html">Liên Hệ</a></li>
+                        <li><a href="">Liên Hệ</a></li>
                     </ul>
                 </div>
             </nav>

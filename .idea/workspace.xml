@@ -3,18 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="2c9d668f-16c1-423c-9d65-89547ff4f235" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/ProductRepo/ProductRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/ProductRepo/ProductRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Repositories/ProductRepo/ProductRepositoryInterface.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Repositories/ProductRepo/ProductRepositoryInterface.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/product/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/product/list.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/cart.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/check-out.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/check-out.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/layout/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/layout/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/layout/header.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/layout/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/layout/master.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/order-detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/order-detail.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/page/product-detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/product-detail.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/Cake-Baker/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/Cake-Baker/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/cart.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/cart.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/check-out.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/check-out.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/layout/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/core/menu-left.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core/menu-left.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -180,7 +174,7 @@
       <workItem from="1609018349276" duration="31632000" />
       <workItem from="1609115408463" duration="33970000" />
       <workItem from="1609205619314" duration="32461000" />
-      <workItem from="1609278571920" duration="7190000" />
+      <workItem from="1609278571920" duration="21426000" />
     </task>
     <servers />
   </component>

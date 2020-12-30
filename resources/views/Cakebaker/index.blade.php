@@ -151,7 +151,7 @@
                             <div class="cake_text">
                                 <h4>{{ number_format($cakeBaker->price) }}đ</h4>
                                 <h3>{{ $cakeBaker->name }}</h3>
-                                <a class="pest_btn" href="#">Thêm vào giỏ</a>
+                                <a class="pest_btn" href="{{ route('add.cart',$cakeBaker->id) }}">Thêm vào giỏ</a>
                             </div>
                         </div>
                     </div>

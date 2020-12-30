@@ -26,14 +26,14 @@ Table of Content:
 06/ contact
 07/ feature
 08/ service
-09/ gallery 
-10/ clients 
-11/ blog 
-12/ video 
-13/ banner  
-14/ event  
-15/ room  
-16/ resturant 
+09/ gallery
+10/ clients
+11/ blog
+12/ video
+13/ banner
+14/ event
+15/ room
+16/ resturant
 17/ footer
 =====================================================================*/
 /*----------------------------------------------------*/
@@ -460,7 +460,7 @@ i:before {
 
 .top_header_area .float-left a {
   color: #fff;
-  font-size: 16px;
+  font-size: 23px;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
   line-height: 50px;
@@ -488,7 +488,7 @@ i:before {
   display: inline-block;
   line-height: 50px;
   color: #fff;
-  font-size: 16px;
+  font-size: 23px;
 }
 
 .top_header_area .float-right .h_social li:last-child {
@@ -502,7 +502,6 @@ i:before {
 }
 
 .top_header_area .float-right .h_search:before {
-  content: "";
   width: 1px;
   height: 20px;
   background: #f8cad9;
@@ -521,7 +520,7 @@ i:before {
 
 .top_header_area .float-right .h_search li a {
   color: #fff;
-  font-size: 16px;
+  font-size: 23px;
   display: inline-block;
   line-height: 50px;
 }
@@ -534,22 +533,37 @@ i:before {
   position: relative;
 }
 
-.top_header_area .float-right .h_search li.shop_cart a:before {
-  content: "3";
-  height: 18px;
-  width: 18px;
-  font-size: 11px;
+.top_header_area .float-right .h_search li.shop_cart .qty-cart a:before {
   text-align: center;
-  border-radius: 50%;
   background: #fff;
   color: #242424;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
-  display: inline-block;
-  line-height: 18px;
-  position: absolute;
-  right: -8px;
-  top: 5px;
+    border-radius: 50%;
+}
+.qty-cart{
+    border-radius: 50%;
+    background: #fff;
+    font-size: 16px;
+    height: 18px;
+    width: 19px;
+    display: inline-block;
+    line-height: 15px;
+    position: absolute;
+    right: 36px;
+    top: 3px;
+}
+
+.header-quanty-cart{
+    border: 1px solid #0a001f;
+    height: 32px;
+    width: 85px;
+}
+.header-quanty-cart .minus{
+    font-size: 35px;
+}
+.plus{
+    font-size: 25px;
 }
 
 .main_menu_area {

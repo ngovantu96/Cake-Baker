@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Http\Repositories\CustomerRepo\CustomerRepository;
+use App\Http\Repositories\CustomerRepo\CustomerRepositoryInterface;
 use App\Http\Repositories\ProductRepo\ProductRepositoryInterface;
 use App\Http\Repositories\ProductRepo\ProductRepository;
 use App\Http\Repositories\UserRepo\UserRepository;
@@ -26,6 +28,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(RoleRepositoryInterface::class,RoleRepository::class);
         $this->app->bind(UserRepositoryInterface::class,UserRepository::class);
         $this->app->bind(ProductRepositoryInterface::class,ProductRepository::class);
+        $this->app->bind(CustomerRepositoryInterface::class, CustomerRepository::class);
     }
 
     /**

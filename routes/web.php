@@ -1,9 +1,12 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CheckOutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
@@ -24,8 +27,17 @@ use Illuminate\Support\Facades\Route;
 //    return view('welcome');
 //});
 Route::prefix('cake-baker')->group(function(){
+    //trang chu
     Route::get('/', [ProductController::class,'getCakeBaker'])->name('home');
     Route::get('/chi-tiet/{id}', [ProductController::class,'productDetail'])->name('product-detail');
+    Route::get('/them-vao-gio-hang/{id}',[CartController::class,'addCart'])->name('add.cart');
+    Route::get('/update-gio-hang/{id}',[CartController::class,'minusCart'])->name('minus.cart');
+    Route::get('/chi-tiet-gio-hang',[CartController::class,'showCart'])->name('show.cart');
+    Route::get('/delete-gio-hang/{id}',[CartController::class,'removeCart'])->name('delete.cart');
+
+//    check out
+    Route::get('/thong-tin-mua-hang',[CheckOutController::class,'showChckOut'])->name('show.check-out');
+
 });
 ;
 Route::get('/product-detail',function(){
@@ -89,5 +101,8 @@ Route::prefix('product')->group(function(){
     Route::post('/update/{id}',[ProductController::class,'update'])->name('product.update');
     Route::get('/delete/{id}',[ProductController::class,'delete'])->name('product.delete');
 });
+
+//order
+Route::get('order',[OrderController::class,'index'])->name('order.list');
 //});
 

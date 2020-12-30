@@ -15,7 +15,10 @@
     <section class="billing_details_area p_100">
         <div class="container">
             <div class="return_option">
-                <h4>Bạn Chưa Có Tài Khoản? <a href="#">Click Vào Đây Để Đăng i</a></h4>
+                <h4>Bạn Chưa Có Tài Khoản? <a href="#">Click Vào Đây Để Đăng Kí</a></h4>
+            </div>
+            <div class="return_option">
+                <h4>Mua Hàng Không Cần Tài Khoản</h4>
             </div>
             <div class="row">
                 <div class="col-lg-7">
@@ -25,26 +28,25 @@
                     <div class="billing_form_area">
                         <form class="billing_form row" action="http://galaxyanalytics.net/demos/cake/theme/cake-html/contact_process.php" method="post" id="contactForm" novalidate="novalidate">
                             <div class="form-group col-md-12">
-                                <label for="first">Họ Và Tên</label>
+                                <label for="first">Họ Và Tên *</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Họ Và Tên">
                             </div>
                             <div class="form-group col-md-12">
-                                <label for="address">Địa Chỉ</label>
+                                <label for="address">Địa Chỉ *</label>
                                 <input type="text" class="form-control" id="address" name="address" placeholder="Địa Chỉ">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="email">Email</label>
+                                <label for="email">Email *</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Địa Chỉ Email">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="phone">Phone *</label>
-                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Select an option">
+                                <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại">
                             </div>
                             <div class="form-group col-md-12">
-                                <label for="phone">Ghi Chú</label>
+                                <label for="phone">Ghi Chú *</label>
                                 <textarea class="form-control" name="message" id="message" rows="1" placeholder="ghi chú"></textarea>
                             </div>
-                        </form>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -52,12 +54,15 @@
                         <div class="main_title">
                             <h2>Đơn Hàng Của Bạn</h2>
                         </div>
+                        @if($cart)
                         <div class="payment_list">
                             <div class="price_single_cost">
                                 <h5>Sản Phẩm <span>Tổng Tiền</span></h5>
-                                <h5>Tên Sản  Phẩm x 1 <span>$65.00</span></h5>
+                                @foreach(@$cart->products as $item)
+                                <h5>{{$item['productInfo']->name}} x {{ $item['qty'] }} <span>{{ number_format($item['price']) }}đ</span></h5>
+                                @endforeach
                                 <h5>Phí Giao Hàng<span class="text_f">Miễn Phí</span></h5>
-                                <h3>Tổng Tiền <span>$65.00</span></h3>
+                                <h3>Tổng Tiền <span>{{ number_format($cart->totalPrice) }}đ</span></h3>
                             </div>
                             <div id="accordion" class="accordion_area">
                                 <div class="card">
@@ -68,8 +73,10 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" value="submit" class="btn pest_btn">place order</button>
+                            <button type="submit" value="submit" class="btn pest_btn">Xác nhận mua hàng</button>
+                            </form>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>
