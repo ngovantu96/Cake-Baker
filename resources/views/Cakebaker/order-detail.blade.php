@@ -1,4 +1,4 @@
-@extends('page.layout.master')
+@extends('Cakebaker.layout.master')
 @section('page-title','trang chu')
 @section('content')
     <!--================End Main Header Area =================-->

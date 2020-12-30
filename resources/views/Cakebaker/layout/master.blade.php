@@ -43,7 +43,7 @@
 
 <!-- navbar -->
 
-@include('page.layout.header')
+@include('Cakebaker.layout.header')
 {{--<div class="search-bar">--}}
 {{--    <div class="container">--}}
 {{--        <div class="row">--}}
@@ -70,7 +70,7 @@
 
 <!-- carousel -->
 
-@include('page.layout.footer')
+@include('Cakebaker.layout.footer')
 <script src="{{ asset('Cake-Baker/js/jquery-3.2.1.min.js') }}"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="{{ asset('Cake-Baker/js/popper.min.js') }}"></script>

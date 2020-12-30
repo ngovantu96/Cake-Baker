@@ -1,4 +1,4 @@
-@extends('page.layout.master')
+@extends('Cakebaker.layout.master')
 @section('page-title','trang chu')
 @section('content')
     <!--================Slider Area =================-->
@@ -136,58 +136,26 @@
             </div>
             <div class="cake_feature_inner">
                 <div class="main_title">
-                    <h2>Bánh Nổi Bật</h2>
+                    <h2>Bánh Cake-Baker</h2>
                     <h5> Seldolor sit amet consect etur</h5>
                 </div>
                 <div class="cake_feature_slider owl-carousel">
+                    @foreach($cakeBakers as $cakeBaker)
                     <div class="item">
                         <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="{{ asset('Cake-Baker/img/cake-feature/c-feature-1.jpg') }}" alt="">
-                            </div>
+                           <a href="{{ route('product-detail',$cakeBaker->id) }}">
+                               <div class="cake_img">
+                                   <img src="{{ asset('storage/'.substr($cakeBaker->image_product,7)) }}" alt="">
+                               </div>
+                           </a>
                             <div class="cake_text">
-                                <h4>$29</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="pest_btn" href="#">Add to cart</a>
+                                <h4>{{ number_format($cakeBaker->price) }}đ</h4>
+                                <h3>{{ $cakeBaker->name }}</h3>
+                                <a class="pest_btn" href="#">Thêm vào giỏ</a>
                             </div>
                         </div>
                     </div>
-                    <div class="item">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="{{ asset('Cake-Baker/img/cake-feature/c-feature-2.jpg') }}" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>$29</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="pest_btn" href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="{{ asset('Cake-Baker/img/cake-feature/c-feature-3.jpg') }}" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>$29</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="pest_btn" href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="cake_feature_item">
-                            <div class="cake_img">
-                                <img src="{{ asset('Cake-Baker/img/cake-feature/c-feature-4.jpg') }}" alt="">
-                            </div>
-                            <div class="cake_text">
-                                <h4>$29</h4>
-                                <h3>Strawberry Cupcakes</h3>
-                                <a class="pest_btn" href="#">Add to cart</a>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

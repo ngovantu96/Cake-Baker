@@ -23,10 +23,11 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-//Route::get('/admin', function () {
-//    return view('admin.index');
-//});
-
+Route::prefix('cake-baker')->group(function(){
+    Route::get('/', [ProductController::class,'getCakeBaker'])->name('home');
+    Route::get('/chi-tiet/{id}', [ProductController::class,'productDetail'])->name('product-detail');
+});
+;
 Route::get('/product-detail',function(){
    return view('page.product-detail');
 });
@@ -47,7 +48,7 @@ Route::get('/order',function(){
 
 
 
-Route::get('/cake-baker',[HomeController::class,'index'])->name('home');
+//
 //
 //Route::get('/admin',[LoginController::class,'login'])->name('login');
 //Route::post('admin/login',[LoginController::class,'checkLogin'])->name('admin.login');

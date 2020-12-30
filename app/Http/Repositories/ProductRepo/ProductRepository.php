@@ -25,7 +25,7 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
         $image = $request->image->store('public/product');
         $this->model->image_product = $image;
 
-        $image_detail = $request->image_detail1->store('public/product');
+        $image_detail = $request->image_detail->store('public/product');
         $this->model->image_detail = $image_detail;
 
 
@@ -50,11 +50,16 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
         $image = $request->image->store('public/product');
         $obj->image_product = $image;
 
-        $image_detail = $request->image_detail1->store('public/product');
-        $obj->image_detail1 = $image_detail;
+        $image_detail = $request->image_detail->store('public/product');
+        $obj->image_detail = $image_detail;
 
         $this->model->save();
     }
+
+    public function getCakeBaker(){
+        $cakeBakers = $this->model->where('category_id','=',4)->get();
+        return $cakeBakers;
+}
 
 
 }

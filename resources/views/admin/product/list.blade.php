@@ -61,7 +61,7 @@
                                         <td>{{ $product->quantity }}</td>
                                         <td>{{ number_format($product->costPrice) }}đ</td>
                                         <td>{{ number_format($product->price) }}đ</td>
-                                        <td>{{ $product->size }}ml</td>
+                                        <td>{{ $product->size }}g</td>
                                         <td><a href="{{route('product.edit',$product->id)}}">
                                                 <button type="button" class="btn btn-primary" >
                                                     Chi Tiết
