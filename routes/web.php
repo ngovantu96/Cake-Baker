@@ -122,8 +122,7 @@ Route::get('admin/logout',[LoginController::class,'logout'])->name('logout');
         Route::get('/',[OrderController::class,'index'])->name('order.list');
         Route::get('/create',[OrderController::class,'create'])->name('order.create');
         Route::get('/detail/{id}',[OrderController::class,'orderDetails'])->name('order.detail');
-        Route::get('delete-details/{id}',[OrderController::class,'deleteOrderDetails'])->name('order.delete-details');
-        Route::get('delete-order/{id}',[OrderController::class,'orderDelete'])->name('order.delete-order');
+        Route::get('delete-order/{id}',[OrderController::class,'orderDelete'])->name('order.delete');
     });
 
 //});

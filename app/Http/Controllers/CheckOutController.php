@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Cart;
+use App\Http\Requests\CustomerRequest;
 use App\Models\Customer;
 use App\Models\Order;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class CheckOutController extends Controller
@@ -15,7 +15,7 @@ class CheckOutController extends Controller
         return view('Cakebaker.check-out',compact('cart'));
     }
 
-    public function createOrder(Request $request)
+    public function createOrder(CustomerRequest $request)
     {
         $customer = new  Customer();
         $customer->name = $request->name;
@@ -50,6 +50,7 @@ class CheckOutController extends Controller
         return redirect()->route('home')->with('add','Đặt Hàng Thành Công.!!!');
 
         }
+
 
 
 }

@@ -69,7 +69,7 @@
                                             <button type="button" class="btn btn-success" >
                                                 chi tiết
                                             </button></a>||
-                                        <a href="">
+                                        <a href="{{ route('order.delete',$order->id) }}">
                                             <button type="button" class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không ?')" >
                                                 Xoá
                                             </button></a>

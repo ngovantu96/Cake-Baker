@@ -3,21 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="2c9d668f-16c1-423c-9d65-89547ff4f235" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CartController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/CheckOutController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/CheckOutController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LoginController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrderController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/UserMiddleware.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Customer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Customer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/check-out.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/check-out.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/core/menu-left.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/core/menu-left.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Requests/CustomerRequest.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Requests/CustomerRequest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/app.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/app.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/layout/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/Cakebaker/layout/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/Cakebaker/order-detail.blade.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/order/list.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/list.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/order/order-detail.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/order/order-detail.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -185,6 +178,7 @@
       <workItem from="1609205619314" duration="32461000" />
       <workItem from="1609278571920" duration="39575000" />
       <workItem from="1609379566558" duration="19673000" />
+      <workItem from="1609417683481" duration="11574000" />
     </task>
     <servers />
   </component>
@@ -220,6 +214,11 @@
           <url>file://$PROJECT_DIR$/resources/views/admin/customer/create.blade.php</url>
           <line>33</line>
           <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/Cakebaker/check-order.blade.php</url>
+          <line>86</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

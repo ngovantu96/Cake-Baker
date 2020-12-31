@@ -77,13 +77,7 @@
 {{--                            </ul>--}}
                         </li>
                         <li class="dropdown submenu">
-                            <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Đơn Hàng Của Bạn</a>
-{{--                            <ul class="dropdown-menu">--}}
-{{--                                <li><a href="shop.html">Main shop</a></li>--}}
-{{--                                <li><a href="product-details.html">Product Details</a></li>--}}
-{{--                                <li><a href="cart.html">Cart Page</a></li>--}}
-{{--                                <li><a href="checkout.html">Checkout Page</a></li>--}}
-{{--                            </ul>--}}
+                            <a  href="">Đơn Hàng Của Bạn</a>
                         </li>
                         <li><a href="">Liên Hệ</a></li>
                     </ul>
