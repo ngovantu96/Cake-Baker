@@ -1,10 +1,11 @@
 <?php
 
-use App\Http\Controllers\AdminController;
+
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckOutController;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
@@ -37,7 +38,9 @@ Route::prefix('cake-baker')->group(function(){
     Route::get('/delete-gio-hang/{id}',[CartController::class,'removeCart'])->name('delete.cart');
 
 //    check out
-    Route::get('/thong-tin-mua-hang',[CheckOutController::class,'showChckOut'])->name('show.check-out');
+    Route::get('/thong-tin-mua-hang',[CheckOutController::class,'showCheckOut'])->name('show.check-out');
+    Route::post('/thanh-toan',[CheckOutController::class,'createOrder'])->name('order.checkout');
+
 
 });
 ;
@@ -65,9 +68,9 @@ Route::get('/order',function(){
 //
 //Route::get('/admin',[LoginController::class,'login'])->name('login');
 //Route::post('admin/login',[LoginController::class,'checkLogin'])->name('admin.login');
-//Route::get('admin/logout',[LoginController::class,'logout'])->name('admin.logout');
+Route::get('admin/logout',[LoginController::class,'logout'])->name('logout');
 //Route::middleware('auth')->prefix('admin')->group(function(){
-//    Route::get('/',[AdminController::class,'index'])->name('dashboard');
+    Route::get('/',[DashboardController::class,'index'])->name('admin.dashboard');
     //user
     Route::prefix('user')->group(function(){
         Route::get('/',[UserController::class,'index'])->name('user.list');
@@ -105,16 +108,23 @@ Route::get('/order',function(){
         Route::get('/delete/{id}',[RoleController::class,'delete'])->name('role.delete');
     });
 //    product
-Route::prefix('product')->group(function(){
-    Route::get('/',[ProductController::class,'index'])->name('product.list');
-    Route::get('/show-create',[ProductController::class,'create'])->name('product.create');
-    Route::post('/create',[ProductController::class,'store'])->name('product.store');
-    Route::get('/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
-    Route::post('/update/{id}',[ProductController::class,'update'])->name('product.update');
-    Route::get('/delete/{id}',[ProductController::class,'delete'])->name('product.delete');
-});
+    Route::prefix('product')->group(function(){
+        Route::get('/',[ProductController::class,'index'])->name('product.list');
+        Route::get('/show-create',[ProductController::class,'create'])->name('product.create');
+        Route::post('/create',[ProductController::class,'store'])->name('product.store');
+        Route::get('/edit/{id}',[ProductController::class,'edit'])->name('product.edit');
+        Route::post('/update/{id}',[ProductController::class,'update'])->name('product.update');
+        Route::get('/delete/{id}',[ProductController::class,'delete'])->name('product.delete');
+    });
 
 //order
-Route::get('order',[OrderController::class,'index'])->name('order.list');
+    Route::prefix('order')->group(function(){
+        Route::get('/',[OrderController::class,'index'])->name('order.list');
+        Route::get('/create',[OrderController::class,'create'])->name('order.create');
+        Route::get('/detail/{id}',[OrderController::class,'orderDetails'])->name('order.detail');
+        Route::get('delete-details/{id}',[OrderController::class,'deleteOrderDetails'])->name('order.delete-details');
+        Route::get('delete-order/{id}',[OrderController::class,'orderDelete'])->name('order.delete-order');
+    });
+
 //});
 

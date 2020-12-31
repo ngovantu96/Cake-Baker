@@ -12,7 +12,13 @@
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 <li class="nav-item">
-                    <a href="{{ route('user.list') }}" class="nav-link active">
+                    <a href="{{ route('admin.dashboard') }}" class="nav-link active">
+                        <i class="nav-icon fas fa-th"></i>
+                        <p>Dash board</p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{ route('user.list') }}" class="nav-link">
                         <i class="nav-icon fas fa-users"></i>
                         <p>Quản Lý Người Dùng</p>
                     </a>
@@ -61,7 +67,7 @@
 
                 </li>
                 <li class="nav-item">
-                    <a href="" class="nav-link">
+                    <a href="{{ route('logout') }}" class="nav-link" onclick="return confirm('Bạn muốn đăng xuất không')">
                         <i class="fa fa-sign-out" aria-hidden="true"></i>
                         <p>Đăng Xuất</p>
                     </a>

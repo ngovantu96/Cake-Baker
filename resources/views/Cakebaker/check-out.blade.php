@@ -26,7 +26,8 @@
                         <h2>Chi Tiết Thanh Toán</h2>
                     </div>
                     <div class="billing_form_area">
-                        <form class="billing_form row" action="http://galaxyanalytics.net/demos/cake/theme/cake-html/contact_process.php" method="post" id="contactForm" novalidate="novalidate">
+                        <form class="billing_form row" action="{{ route('order.checkout') }}" method="post" >
+                            @csrf
                             <div class="form-group col-md-12">
                                 <label for="first">Họ Và Tên *</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Họ Và Tên">
@@ -44,9 +45,11 @@
                                 <input type="text" class="form-control" id="phone" name="phone" placeholder="Số điện thoại">
                             </div>
                             <div class="form-group col-md-12">
-                                <label for="phone">Ghi Chú *</label>
-                                <textarea class="form-control" name="message" id="message" rows="1" placeholder="ghi chú"></textarea>
+                                <label for="note">Ghi Chú *</label>
+                                <textarea class="form-control" name="note" id="note" rows="1" placeholder="ghi chú"></textarea>
                             </div>
+                            <input type="submit"  class="btn pest_btn" value="Xác nhận mua hàng">
+                        </form>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -73,8 +76,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <button type="submit" value="submit" class="btn pest_btn">Xác nhận mua hàng</button>
-                            </form>
                         </div>
                         @endif
                     </div>

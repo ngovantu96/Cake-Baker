@@ -17,17 +17,26 @@
     </div><!-- /.container-fluid -->
 </section>
 <section class="content">
+    <div class="col-6">
+        <div class="row">
+            <div class="col-3">
+                <a href="" class="btn btn-info">Đang Chờ Xử Lý</a>
+            </div>
+            <div class="col-3">
+                <a href="" class="btn btn-primary">Đang Giao Hàng</a>
+            </div>
+            <div class="col-3">
+                <a href="" class="btn btn-success">Đã Giao Hàng</a>
+            </div>
+            <div class="col-3">
+                <a href="" class="btn btn-danger">Đã Hủy Đơn Hàng</a>
+            </div>
+        </div>
+    </div>
     <div class="container-fluid">
         <div class="row">
             <div class="col-12">
                 <div class="card">
-                    <div class="col-12">
-                        @if (Session::has('success'))
-                            <p class="text-success">
-                                <i class="fa fa-check" aria-hidden="true"></i>{{ Session::get('success') }}
-                            </p>
-                        @endif
-                    </div>
                     <!-- /.card-header -->
                     <div class="card-body">
                         <table id="table" class="table table-bordered table-hover">
@@ -36,32 +45,38 @@
                                 <th>STT</th>
                                 <th>Mã Đơn Hàng</th>
                                 <th>Tên Khách Hàng</th>
+                                <th>Ghi Chú</th>
                                 <th>Trạng thái</th>
                                 <th>Ngày Đặt</th>
                                 <th>Hành Động</th>
                             </tr>
                             </thead>
                             <tbody>
-{{--                            @foreach($orders as $key=>$order)--}}
-{{--                                <tr>--}}
-{{--                                    <td>{{ ++$key }}</td>--}}
-{{--                                    <td>{{ $order->id }}</td>--}}
-{{--                                    <td>{{ $order->customer->name }}</td>--}}
-{{--                                    <td>{{ ($order->status == 1) ? 'Đã xác nhận' : 'chưa xác nhận' }}</td>--}}
-{{--                                    <td>{{ $order->created_at }}</td>--}}
-{{--                                    <td>--}}
-{{--                                        <a href="{{ route('order.detail',$order->id) }}">--}}
-{{--                                            <button type="button" class="btn btn-success" >--}}
-{{--                                                chi tiết--}}
-{{--                                            </button></a>||--}}
-{{--                                        <a href="{{ route('order.delete',$order->id) }}">--}}
-{{--                                            <button type="button" class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không ?')" >--}}
-{{--                                                Xoá--}}
-{{--                                            </button></a>--}}
-{{--                                    </td>--}}
+                            @foreach($orders as $key=>$order)
+                                <tr>
+                                    <td>{{ ++$key }}</td>
+                                    <td>{{ $order->id }}</td>
+                                    <td>{{ $order->customer->name }}</td>
+                                    <td>{{ $order->note }}</td>
+                                    <td>
+                                        <span class="badge {{ $order->Badge() }}">
+                                            {{ $order->status() }}
+                                        </span>
+                                    </td>
+                                    <td>{{ $order->created_at }}</td>
+                                    <td>
+                                        <a href="{{ route('order.detail',$order->id) }}">
+                                            <button type="button" class="btn btn-success" >
+                                                chi tiết
+                                            </button></a>||
+                                        <a href="">
+                                            <button type="button" class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không ?')" >
+                                                Xoá
+                                            </button></a>
+                                    </td>
 
-{{--                                </tr>--}}
-{{--                            @endforeach--}}
+                                </tr>
+                            @endforeach
                             </tbody>
                         </table>
 

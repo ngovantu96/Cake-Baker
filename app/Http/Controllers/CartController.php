@@ -16,7 +16,7 @@ class CartController extends Controller
             $newCart->AddCart($product, $id);
             $request->session()->put('Cart',$newCart);
         }
-        return redirect()->back()->with('add','Thêm Mới thành công');
+        return redirect()->back()->with('add','Thêm vào giỏ thành công');
     }
     public function minusCart(Request $request, $id){
         $product = Product::findOrFail($id);
@@ -26,7 +26,7 @@ class CartController extends Controller
             $newCart->MinusCart($product, $id);
             $request->session()->put('Cart',$newCart);
         }
-        return redirect()->back()->with('update','Cập nhật thành công');
+        return redirect()->back()->with('update','Cập nhật giỏ hàng thành công');
     }
 
     public function showCart(){
