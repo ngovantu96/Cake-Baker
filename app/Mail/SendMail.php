@@ -20,7 +20,7 @@ class SendMail extends Mailable
      */
     public function __construct($details)
     {
-        $this->details = $details;
+        $this->details =  $details;
     }
 
     /**
@@ -29,18 +29,9 @@ class SendMail extends Mailable
      * @return $this
      */
 
-    public function sendMail($request)
-    {
-        $details = [
-            'name'=>$request->name,
-            'email'=> $request->email,
-            'subject'=>$request->subject,
-            'tile'=>$request->tile,
-        ];
-        return $details;
-    }
+
     public function build()
     {
-        return $this->subject('CakeBaker','Don hang cua ban');
+        return $this->subject('CakeBaker','Don hang cua ban')->view('admin.order.sendMail');
     }
 }

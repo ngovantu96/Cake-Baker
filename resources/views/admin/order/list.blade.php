@@ -68,11 +68,13 @@
                                         <a href="{{ route('order.detail',$order->id) }}">
                                             <button type="button" class="btn btn-success" >
                                                 chi tiết
-                                            </button></a>||
+                                            </button>
+                                        </a>||
                                         <a href="{{ route('order.delete',$order->id) }}">
                                             <button type="button" class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không ?')" >
                                                 Xoá
-                                            </button></a>
+                                            </button>
+                                        </a>
                                     </td>
 
                                 </tr>

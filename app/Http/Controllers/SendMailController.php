@@ -8,15 +8,17 @@ use Illuminate\Support\Facades\Mail;
 
 class SendMailController extends Controller
 {
-    private $sendMail;
-    public function __construct(SendMail $sendMail)
-    {
-        $this->sendMail = $sendMail;
-    }
+
     public function sendMail(Request $request)
     {
-       $this->sendMail->sendMail($request);
-        Mail::to("rongvotu@gmail.com")->send(new SendMail($details['email']));
-        return redirect()->route('order.list')->width('add','Gửi Thành Công');
+        $details = [
+            'name'=> $request->name,
+            'email'=>$request->email,
+            'title'=>$request->title,
+            'subject'=>$request->subject,
+
+        ];
+        Mail::to($details['email'])->send(new SendMail($details));
+       return redirect()->route('order.list')->with('add','Gửi Thành Công');
     }
 }

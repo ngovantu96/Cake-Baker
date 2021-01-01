@@ -71,8 +71,8 @@
                     @enderror
 
                     <div class="form-group">
-                        <label for="content">Nội Dung</label>
-                        <textarea class="form-control" name="subject" id="content" rows="3" placeholder="Nội Dung"></textarea>
+                        <label for="subject">Nội Dung</label>
+                        <textarea class="form-control" name="subject" id="subject" rows="3" placeholder="Nội Dung"></textarea>
                     </div>
                     @error('name')
                     <p class="text-danger">{{ $message }}</p>
