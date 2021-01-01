@@ -31,10 +31,6 @@ class OrderController extends Controller
         $orderDelete->delete();
         return redirect()->route('order.list')->with('delete','xóa thành công.');
     }
-//    public function orderDelete($id){
-//        $orderDelete = Order::FindOrFail($id);
-//        $orderDelete->delete();
-//        return redirect()->route('order.index');
-//    }
+
 
 }

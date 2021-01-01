@@ -26,10 +26,7 @@
                 <li class="nav-item">
                     <a href="{{ route('role.list') }}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Quản Lý Chức Vụ
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
+                        <p>Quản Lý Chức Vụ</p>
                     </a>
 
                 </li>
@@ -42,10 +39,7 @@
                 <li class="nav-item">
                     <a href="{{ route('product.list') }}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Danh Sách Sản Phẩm
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
+                        <p>Danh Sách Sản Phẩm</p>
                     </a>
 
                 </li>
@@ -59,17 +53,14 @@
                 <li class="nav-item">
                     <a href="{{ route('order.list') }}" class="nav-link">
                         <i class="nav-icon fas fa-th"></i>
-                        <p>
-                            Danh Sách Đơn Hàng
-                            <i class="fas fa-angle-left right"></i>
-                        </p>
+                        <p>Danh Sách Đơn Hàng</p>
                     </a>
 
                 </li>
                 <li class="nav-item">
                     <a href="{{ route('logout') }}" class="nav-link" onclick="return confirm('Bạn muốn đăng xuất không')">
-                        <i class="fa fa-sign-out" aria-hidden="true"></i>
-                        <p>Đăng Xuất</p>
+                        <i class="fas fa-sign-out-alt ml-2"></i>
+                        <p class="ml-2">Đăng Xuất</p>
                     </a>
 
                 </li>

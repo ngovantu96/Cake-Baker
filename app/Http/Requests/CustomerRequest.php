@@ -25,7 +25,7 @@ class CustomerRequest extends FormRequest
     {
         return [
             'name'=>'required|min:2',
-            'phone'=>'required|numeric|size:10',
+            'phone'=>'required|numeric|min:10',
             'email'=>'required',
             'address'=>'required',
         ];
@@ -36,7 +36,7 @@ class CustomerRequest extends FormRequest
           'name.required'=>'tên không được để trống.',
             'name.min'=>'tên có ít nhất 2 kí tự.',
             'phone.required'=>'số điện thoại không được để trống.',
-            'phone.size'=>'số điện thoại không hợp lệ.',
+            'phone.min'=>'số điện thoại không hợp lệ.',
             'phone.numeric'=>'số điện thoại không hợp lệ.',
             'email.required'=>'email không được để trống',
             'address.required'=>'địa chỉ không được để trống.',

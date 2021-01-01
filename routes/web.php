@@ -11,6 +11,7 @@ use App\Http\Controllers\LoginController;
 use App\Http\Controllers\OrderController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\SendMailController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
@@ -39,7 +40,8 @@ Route::prefix('cake-baker')->group(function(){
 
 //    check out
     Route::get('/thong-tin-mua-hang',[CheckOutController::class,'showCheckOut'])->name('show.check-out');
-    Route::post('/thanh-toan',[CheckOutController::class,'createOrder'])->name('order.checkout');
+    Route::post('/thanh-toan',[CheckOutController::class,'createOrder'])->name('order.payment');
+
 
 
 });
@@ -124,6 +126,9 @@ Route::get('admin/logout',[LoginController::class,'logout'])->name('logout');
         Route::get('/detail/{id}',[OrderController::class,'orderDetails'])->name('order.detail');
         Route::get('delete-order/{id}',[OrderController::class,'orderDelete'])->name('order.delete');
     });
+
+    //send mail
+    Route::post('/send-mail',[SendMailController::class,'sendMail'])->name('send-mail');
 
 //});
 
