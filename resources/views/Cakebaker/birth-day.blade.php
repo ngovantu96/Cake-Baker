@@ -24,11 +24,11 @@
                         <div class="cake_feature_item">
                             <a href="{{ route('product-detail',$cakeBirthDay->id) }}">
                                 <div class="cake_img">
-                                    <img src="{{ asset('storage/'.substr($cakeBirthDay->image_product,7)) }}" alt="">
+                                    <img src="{{ asset('storage/'.substr($cakeBirthDay->image_product,7)) }}" alt="" width="255px" height="200px">
                                 </div>
                             </a>
                             <div class="cake_text">
-                                <h4>{{number_format($cakeBirthDay->price)}}</h4>
+                                <h4>{{number_format($cakeBirthDay->price)}}đ</h4>
                                 <h3>{{$cakeBirthDay->name}}</h3>
                                 <a class="pest_btn" href="{{ route('add.cart',$cakeBirthDay->id) }}">Thêm vào giỏ</a>
                             </div>

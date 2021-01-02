@@ -128,6 +128,7 @@ Route::get('admin/logout',[LoginController::class,'logout'])->name('logout');
         Route::get('/create',[OrderController::class,'create'])->name('order.create');
         Route::get('/detail/{id}',[OrderController::class,'orderDetails'])->name('order.detail');
         Route::get('delete-order/{id}',[OrderController::class,'orderDelete'])->name('order.delete');
+        Route::post('/order-status/{id}',[OrderController::class,'statusOrder'])->name('order.status');
         Route::get('wait',[OrderController::class,'waiting'])->name('order.waiting');
         Route::get('ship',[OrderController::class,'ship'])->name('order.ship');
         Route::get('success',[OrderController::class,'success'])->name('order.success');

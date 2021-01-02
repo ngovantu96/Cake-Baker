@@ -53,5 +53,13 @@ class OrderController extends Controller
         return view('admin.order.list',compact('orders'));
     }
 
+    public function statusOrder(Request $request,$id)
+    {
+        $order = Order::findOrFail($id);
+        $order->status = $request->name;
+        $order->save();
+        return redirect()->route('order.list')->with('update','Cập nhật thành công');
+    }
+
 
 }

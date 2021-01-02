@@ -28,7 +28,7 @@
                             </div>
                         </a>
                         <div class="cake_text">
-                            <h4>{{$cakeBaker->price}}</h4>
+                            <h4>{{ number_format($cakeBaker->price) }}đ</h4>
                             <h3>{{$cakeBaker->name}}</h3>
                             <a class="pest_btn" href="{{ route('add.cart',$cakeBaker->id) }}">Thêm vào giỏ</a>
                         </div>

@@ -13,6 +13,20 @@
                         <li class="breadcrumb-item active">Chi Tiết Đơn Hàng</li>
                     </ol>
                 </div>
+                <div class="col-sm-6">
+                    @foreach($orders as $order)
+                    <form action="{{route('order.status',$order->id)}}" method="post">
+                        @csrf
+                        <select name="name" >
+                            <option value="1" name="{{ $order->status }}">Đang Chờ Xử Lý</option>
+                            <option value="2" name="{{ $order->status }}">Đang Giao Hàng</option>
+                            <option value="3" name="{{ $order->status }}">Đã Giao Hàng </option>
+                            <option value="4" name="{{ $order->status }}">Đã Hủy</option>
+                        </select>
+                        <input type="submit" value="Thay Đổi" class="btn btn-primary">
+                    </form>
+                    @endforeach
+                </div>
             </div>
         </div><!-- /.container-fluid -->
     </section>

@@ -31,10 +31,10 @@
                             <div class="form-group col-md-12">
                                 <label for="first">Họ Và Tên *</label>
                                 <input type="text" class="form-control" id="name" name="name" placeholder="Họ Và Tên">
+                                @error('name')
+                                <span class="text-danger">{{ $message }}</span>
+                                @enderror
                             </div>
-                            @error('name')
-                            <span class="text-danger">{{ $message }}</span>
-                            @enderror
 
                             <div class="form-group col-md-12">
                                 <label for="address">Địa Chỉ *</label>

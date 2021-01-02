@@ -50,17 +50,19 @@ class User extends Authenticatable
         return $this->belongsTo(Role::class);
     }
     public function status(){
-        if($this->status = StatusUser::ACTIVE){
+        if($this->status == StatusUser::ACTIVE){
             return "Đang Hoạt Động";
-        }else{
-            return "hông Hoạt Động";
+        }
+        if($this->status == StatusUser::NO_ACTIVE) {
+            return "Không Hoạt Động";
         }
     }
     public function Badge()
     {
         if($this->status == StatusUser::ACTIVE) {
             return "badge-success";
-        }else{
+        }
+        if($this->status == StatusUser::NO_ACTIVE){
             return "badge-danger";
         }
     }

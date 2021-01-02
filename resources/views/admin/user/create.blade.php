@@ -77,13 +77,6 @@
                                                   <p class="text-danger">{{ $message }}</p>
                                                   @enderror
                                                   <div class="form-group">
-                                                      <label for="status">Trạng thái</label>
-                                                      <input type="text" class="form-control" name="status"  placeholder="Enter status" >
-                                                  </div>
-                                                  @error('status')
-                                                  <p class="text-danger">{{ $message }}</p>
-                                                  @enderror
-                                                  <div class="form-group">
                                                       <label>Chức Vụ</label>
                                                       <select name="role" class="form-control" >
                                                           @foreach($roles as $role)
