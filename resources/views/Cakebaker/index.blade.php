@@ -124,7 +124,7 @@
                         <div class="welcome_left_text">
                             <p>Cũng không có ai yêu hoặc theo đuổi hoặc mong muốn có được nỗi đau của chính mình, bởi vì đó là nỗi đau,
                                 nhưng bởi vì đôi khi xảy ra những hoàn cảnh mà sự vất vả và đau đớn có thể mang lại cho anh ta một số niềm vui lớn. Để lấy một ví dụ tầm thường, ai trong chúng ta cũng từng tập thể dục vất vả.</p>
-                            <a class="pink_btn" href="#">Know more about us</a>
+                            <a class="pink_btn" href="#">Xem Nhiều Hơn</a>
                         </div>
                     </div>
                     <div class="col-lg-6">
@@ -136,22 +136,22 @@
             </div>
             <div class="cake_feature_inner">
                 <div class="main_title">
-                    <h2>Bánh Cake-Baker</h2>
-                    <h5> Seldolor sit amet consect etur</h5>
+                    <h2>Bánh Mới Cập Nhật</h2>
+                    <h5>Thơm ngon và chất lượng</h5>
                 </div>
                 <div class="cake_feature_slider owl-carousel">
-                    @foreach($cakeBakers as $cakeBaker)
+                    @foreach($productNews as $productNew)
                     <div class="item">
                         <div class="cake_feature_item">
-                           <a href="{{ route('product-detail',$cakeBaker->id) }}">
+                           <a href="{{ route('product-detail',$productNew->id) }}">
                                <div class="cake_img">
-                                   <img src="{{ asset('storage/'.substr($cakeBaker->image_product,7)) }}" alt="">
+                                   <img src="{{ asset('storage/'.substr($productNew->image_product,7)) }}" alt="">
                                </div>
                            </a>
                             <div class="cake_text">
-                                <h4>{{ number_format($cakeBaker->price) }}đ</h4>
-                                <h3>{{ $cakeBaker->name }}</h3>
-                                <a class="pest_btn" href="{{ route('add.cart',$cakeBaker->id) }}">Thêm vào giỏ</a>
+                                <h4>{{ number_format($productNew->price) }}đ</h4>
+                                <h3>{{ $productNew->name }}</h3>
+                                <a class="pest_btn" href="{{ route('add.cart',$productNew->id) }}">Thêm vào giỏ</a>
                             </div>
                         </div>
                     </div>
@@ -161,10 +161,12 @@
         </div>
     </section>
     <!--================End Welcome Area =================-->
-    <!--================Special Recipe Area =================-->
+    <!--================Special Recipe Area ================
+    . =-->
     <section class="special_recipe_area">
         <div class="container">
             <div class="special_recipe_slider owl-carousel">
+                @foreach($categories as $category)
                 <div class="item">
                     <div class="media">
                         <div class="d-flex">
@@ -177,42 +179,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="item">
-                    <div class="media">
-                        <div class="d-flex">
-                            <img src="{{ asset('Cake-Baker/img/recipe/recipe-1.png') }}" alt="">
-                        </div>
-                        <div class="media-body">
-                            <h4>Công Thức Làm Bánh</h4>
-                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi equatur uis autem vel eum.</p>
-                            <a class="w_view_btn" href="#">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="media">
-                        <div class="d-flex">
-                            <img src="{{ asset('Cake-Baker/img/recipe/recipe-1.png') }}" alt="">
-                        </div>
-                        <div class="media-body">
-                            <h4>Special Recipe</h4>
-                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi equatur uis autem vel eum.</p>
-                            <a class="w_view_btn" href="#">View Details</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="media">
-                        <div class="d-flex">
-                            <img src="{{ asset('Cake-Baker/img/recipe/recipe-1.png') }}" alt="">
-                        </div>
-                        <div class="media-body">
-                            <h4>Special Recipe</h4>
-                            <p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi equatur uis autem vel eum.</p>
-                            <a class="w_view_btn" href="#">View Details</a>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -402,29 +369,7 @@
     </section>
     <!--================End Latest News Area =================-->
 
-    <!--================Newsletter Area =================-->
-    <section class="newsletter_area">
-        <div class="container">
-            <div class="row newsletter_inner">
-                <div class="col-lg-6">
-                    <div class="news_left_text">
-                        <h6>Tham gia danh sách Bản tin của chúng tôi để nhận tất cả các ưu đãi, chiết khấu mới nhất và các lợi ích khác</h6>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="newsletter_form">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Địa Chỉ mail">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button">Đăng Kí</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--================End Newsletter Area =================-->
+
 
 
 

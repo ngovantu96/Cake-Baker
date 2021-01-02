@@ -31,8 +31,11 @@ use Illuminate\Support\Facades\Route;
 //});
 Route::prefix('cake-baker')->group(function(){
     //trang chu
-    Route::get('/', [ProductController::class,'getCakeBaker'])->name('home');
-    Route::get('/chi-tiet/{id}', [ProductController::class,'productDetail'])->name('product-detail');
+    Route::get('/', [HomeController::class,'getProductNew'])->name('home');
+    Route::get('/banh-cake-baker', [HomeController::class,'getCakeBaker'])->name('cake-baker');
+    Route::get('/banh-sinh-nhat', [HomeController::class,'getBirthDay'])->name('birth-day');
+    Route::get('/cac-loai-banh', [HomeController::class,'getChopped'])->name('chopped');
+    Route::get('/chi-tiet/{id}', [HomeController::class,'productDetail'])->name('product-detail');
     Route::get('/them-vao-gio-hang/{id}',[CartController::class,'addCart'])->name('add.cart');
     Route::get('/update-gio-hang/{id}',[CartController::class,'minusCart'])->name('minus.cart');
     Route::get('/chi-tiet-gio-hang',[CartController::class,'showCart'])->name('show.cart');
@@ -125,6 +128,10 @@ Route::get('admin/logout',[LoginController::class,'logout'])->name('logout');
         Route::get('/create',[OrderController::class,'create'])->name('order.create');
         Route::get('/detail/{id}',[OrderController::class,'orderDetails'])->name('order.detail');
         Route::get('delete-order/{id}',[OrderController::class,'orderDelete'])->name('order.delete');
+        Route::get('wait',[OrderController::class,'waiting'])->name('order.waiting');
+        Route::get('ship',[OrderController::class,'ship'])->name('order.ship');
+        Route::get('success',[OrderController::class,'success'])->name('order.success');
+        Route::get('cancel',[OrderController::class,'cancel'])->name('order.cancel');
     });
 
     //send mail

@@ -20,16 +20,16 @@
     <div class="col-6">
         <div class="row">
             <div class="col-3">
-                <a href="" class="btn btn-info">Đang Chờ Xử Lý</a>
+                <a href="{{ route('order.waiting') }}" class="btn btn-info">Đang Chờ Xử Lý</a>
             </div>
             <div class="col-3">
-                <a href="" class="btn btn-primary">Đang Giao Hàng</a>
+                <a href="{{ route('order.ship') }}" class="btn btn-primary">Đang Giao Hàng</a>
             </div>
             <div class="col-3">
-                <a href="" class="btn btn-success">Đã Giao Hàng</a>
+                <a href="{{ route('order.success') }}" class="btn btn-success">Đã Giao Hàng</a>
             </div>
             <div class="col-3">
-                <a href="" class="btn btn-danger">Đã Hủy Đơn Hàng</a>
+                <a href="{{ route('order.cancel') }}" class="btn btn-danger">Đã Hủy Đơn Hàng</a>
             </div>
         </div>
     </div>

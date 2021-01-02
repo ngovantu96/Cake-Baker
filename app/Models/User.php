@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Http\Controllers\StatusUser;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -47,5 +48,20 @@ class User extends Authenticatable
     ];
     public function role(){
         return $this->belongsTo(Role::class);
+    }
+    public function status(){
+        if($this->status = StatusUser::ACTIVE){
+            return "Đang Hoạt Động";
+        }else{
+            return "hông Hoạt Động";
+        }
+    }
+    public function Badge()
+    {
+        if($this->status == StatusUser::ACTIVE) {
+            return "badge-success";
+        }else{
+            return "badge-danger";
+        }
     }
 }

@@ -27,7 +27,7 @@ class Order extends Model
         } elseif ($this->status == StatusOrderConst::SHIPPING) {
             return "Đang Giao Hàng";
         } elseif ($this->status == StatusOrderConst::SUCCESS) {
-            return "Giao Hàng Thành Công";
+            return "Đã Giao Hàng ";
         } else {
             return "Đã Hủy Đơn Hàng";
         }

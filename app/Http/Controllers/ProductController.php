@@ -44,14 +44,5 @@ class ProductController extends Controller
         return redirect()->route('product.list')->with('delete','Xóa thành công');;
     }
 
-    public function getCakeBaker(){
-        $cakeBakers= $this->productRepository->getCakeBaker();
-        return view('Cakebaker.index',compact('cakeBakers'));
-    }
-    public function productDetail($id){
-        $product = $this->productRepository->findById($id);
-        $cakeBakers= $this->productRepository->getCakeBaker();
-        return view('Cakebaker.product-detail',compact('product','cakeBakers'));
-    }
 
 }

@@ -62,7 +62,11 @@
                                         <td>{{ $user->phone }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td>{{  $user->role->name }}</td>
-                                        <td>{{  $user->status }}</td>
+                                        <td>
+                                            <span class="badge {{ $user->Badge() }}">
+                                            {{ $user->status() }}
+                                            </span>
+                                        </td>
                                         <td><a href="{{ route('user.edit',$user->id) }}"><button type="button" class="btn btn-warning">Sửa</button></a> ||
                                             <a href="{{ route('user.delete',$user->id) }}"><button type="button" class="btn btn-danger" onclick="return confirm('Bạn có muốn xóa không ?')">Xóa</button></a></td>
                                 @endforeach

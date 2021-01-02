@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 class OrderController extends Controller
 {
     public function index(){
-        $orders = Order::all();
+        $orders = Order::orderBy('id','DESC')->get();
         return view('admin.order.list',compact('orders'));
     }
     public function orderDetails($id)
@@ -30,6 +30,27 @@ class OrderController extends Controller
         $orderDelete = Order::FindOrFail($id);
         $orderDelete->delete();
         return redirect()->route('order.list')->with('delete','xóa thành công.');
+    }
+
+    public function waiting()
+    {
+        $orders = Order::where("status", 1)->get();
+        return view('admin.order.list',compact('orders'));
+    }
+    public function ship()
+    {
+        $orders = Order::where("status", 2)->get();
+        return view('admin.order.list',compact('orders'));
+    }
+    public function success()
+    {
+        $orders = Order::where("status", 3)->get();
+        return view('admin.order.list',compact('orders'));
+    }
+    public function cancel()
+    {
+        $orders = Order::where("status", 4)->get();
+        return view('admin.order.list',compact('orders'));
     }
 
 

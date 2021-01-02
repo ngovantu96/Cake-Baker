@@ -4,7 +4,7 @@
         <div class="container">
             <div class="float-left">
                 <a href="tell:+18004567890"><i class="fas fa-phone-square-alt"></i> + (1800) 456 7890</a>
-                <a href="mainto:info@cakebakery.com"><i class="far fa-envelope" aria-hidden="true"></i> info@cakebakery.com</a>
+                <a href="mainto:cakebaker@gmail.com"><i class="far fa-envelope" aria-hidden="true"></i>cakebakery@gamil.com</a>
             </div>
             <div class="float-right">
                 <ul class="h_social list_style">
@@ -41,11 +41,9 @@
                         <li class="dropdown submenu">
                             <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Sản Phẩm</a>
                             <ul class="dropdown-menu">
-                                <li><a href="">Sản Phẩm</a></li>
-                                <li><a href="">Home 2</a></li>
-                                <li><a href="">Home 3</a></li>
-                                <li><a href="">Home 4</a></li>
-                                <li><a href="">Home 5</a></li>
+                                <li><a href="{{ route('cake-baker') }}">Caker Bakers</a></li>
+                                <li><a href="{{ route('birth-day') }}">Bánh Sinh Nhật</a></li>
+                                <li><a href="{{ route('chopped') }}">Bánh Mỳ & Các Loại</a></li>
                             </ul>
                         </li>
                     </ul>

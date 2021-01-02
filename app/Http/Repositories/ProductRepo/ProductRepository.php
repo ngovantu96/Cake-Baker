@@ -56,10 +56,28 @@ class ProductRepository extends BaseRepository implements ProductRepositoryInter
         $this->model->save();
     }
 
+    public function getProductNew(){
+        $productNew = $this->model->orderBy('id','DESC')->paginate(8);
+        return $productNew;
+    }
+
+
     public function getCakeBaker(){
         $cakeBakers = $this->model->where('category_id','=',4)->get();
         return $cakeBakers;
-}
+
+    }
+
+    public function getBirthDay(){
+        $cakeBirthDays = $this->model->where('category_id','=','5')->get();
+        return $cakeBirthDays;
+    }
+    public function getChopped(){
+        $cakeCoppeds = $this->model->where('category_id','=','6')->get();
+        return $cakeCoppeds;
+    }
+
+
 
 
 }
