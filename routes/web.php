@@ -70,11 +70,11 @@ Route::get('/order',function(){
 
 
 //
-//
-//Route::get('/admin',[LoginController::class,'login'])->name('login');
-//Route::post('admin/login',[LoginController::class,'checkLogin'])->name('admin.login');
-Route::get('admin/logout',[LoginController::class,'logout'])->name('logout');
-//Route::middleware('auth')->prefix('admin')->group(function(){
+
+Route::get('/login',[LoginController::class,'login'])->name('login');
+Route::post('/login',[LoginController::class,'checkLogin'])->name('admin.login');
+Route::get('/logout',[LoginController::class,'logout'])->name('logout');
+Route::middleware('auth')->prefix('admin')->group(function(){
     Route::get('/',[DashboardController::class,'index'])->name('admin.dashboard');
     //user
     Route::prefix('user')->group(function(){
@@ -138,5 +138,5 @@ Route::get('admin/logout',[LoginController::class,'logout'])->name('logout');
     //send mail
     Route::post('/send-mail',[SendMailController::class,'sendMail'])->name('send-mail');
 
-//});
+});
 

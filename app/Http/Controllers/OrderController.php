@@ -57,6 +57,22 @@ class OrderController extends Controller
     {
         $order = Order::findOrFail($id);
         $order->status = $request->name;
+        if($order->status == StatusOrderConst::SUCCESS)
+        {
+            foreach ($order->products as $item) {
+                $product = Product::findOrFail($item->id);
+                $product->quantity -= $item->pivot->quantity;
+                $product->save();
+            }
+        }elseif ($order->status == StatusOrderConst::CANCEL)
+        {
+            foreach ($order->products as $item) {
+                $product = Product::findOrFail($item->id);
+                $product->quantity += $item->pivot->quantity;
+                $product->save();
+            }
+
+        }
         $order->save();
         return redirect()->route('order.list')->with('update','Cập nhật thành công');
     }

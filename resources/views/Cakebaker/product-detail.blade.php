@@ -23,7 +23,7 @@
                     <div class="product_details_text">
                         <h4>{{ $product->name }}</h4>
                         <h5>Tình Trạng : <span class="text-success">{{($product->quantity > 0) ? 'Còn Hàng' : 'Tạm Thời Hết Hàng' }}</span></h5>
-                        <p>Kích Thước Bánh : {{ $product->size }} g</p>
+{{--                        <p>Kích Thước Bánh : {{ $product->size }} g</p>--}}
                         <h5>Giá : <span>{{ number_format($product->price) }} đ</span></h5>
                         <a class="pink_more" href="#">Thêm vào giỏ</a>
                     </div>
