@@ -16,7 +16,6 @@ class SendMailController extends Controller
             'email'=>$request->email,
             'title'=>$request->title,
             'subject'=>$request->subject,
-
         ];
         Mail::to($details['email'])->send(new SendMail($details));
        return redirect()->route('order.list')->with('add','Gửi Thành Công');

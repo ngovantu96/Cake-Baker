@@ -18,10 +18,10 @@
                     <form action="{{route('order.status',$order->id)}}" method="post">
                         @csrf
                         <select name="name" >
-                            <option value="1" name="{{ $order->status }}">Đang Chờ Xử Lý</option>
-                            <option value="2" name="{{ $order->status }}">Đang Giao Hàng</option>
-                            <option value="3" name="{{ $order->status }}">Đã Giao Hàng </option>
-                            <option value="4" name="{{ $order->status }}">Đã Hủy</option>
+                            <option value="1"{{ $order->status == \App\Http\Controllers\StatusOrderConst::WAITING ? 'selected' : '' }}>Đang Chờ Xử Lý</option>
+                            <option value="2"{{ $order->status == \App\Http\Controllers\StatusOrderConst::SHIPPING ? 'selected' : ''}}>Đang Giao Hàng</option>
+                            <option value="3"{{ $order->status == \App\Http\Controllers\StatusOrderConst::SUCCESS ? 'selected' : '' }}>Đã Giao Hàng </option>
+                            <option value="4"{{ $order->status == \App\Http\Controllers\StatusOrderConst::CANCEL ? 'selected' : '' }}>Đã Hủy</option>
                         </select>
                         <input type="submit" value="Thay Đổi" class="btn btn-primary">
                     </form>
@@ -48,8 +48,8 @@
                   @foreach($orderDetails as $orderDetail)
                     <p>Tên Sản Phẩm : {{ $orderDetail->name }}</p>
                     <p>Số lượng : {{ $orderDetail->quantity }}</p>
-                    <p>Giá sản phẩm: {{ $orderDetail->price }}</p>
-                    <p>Tổng tiền : {{ $orderDetail->total }}</p>
+                    <p>Giá sản phẩm: {{ number_format($orderDetail->price) }}</p>
+                    <p>Tổng tiền : {{ number_format($orderDetail->total) }}</p>
                     @endforeach
                 </div>
                     <!-- /.card -->

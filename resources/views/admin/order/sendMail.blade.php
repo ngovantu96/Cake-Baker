@@ -10,6 +10,7 @@
 <body>
     <h1>{{ $details['title'] }}</h1>
     <p>{{ $details['name'] }}</p>
+    <p>{{ $details['email'] }}</p>
     <p>{{ $details['subject'] }}</p>
     <p>Cảm ơn quý khách</p>
 </body>
