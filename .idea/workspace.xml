@@ -2,15 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2c9d668f-16c1-423c-9d65-89547ff4f235" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/CaseStudy-Laravel.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/CaseStudy-Laravel.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/AdminLTE" beforeDir="false" afterPath="$PROJECT_DIR$/public/AdminLTE" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/AdminLTE/iframe.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/AdminLTE/index.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/AdminLTE/index2.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/AdminLTE/index3.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/AdminLTE/starter.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/master.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/master.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,7 +134,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1mBWEAk4ArliTbSrX8PhmC85JDU" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -187,7 +188,7 @@
       <workItem from="1609734063335" duration="1796000" />
       <workItem from="1609735902116" duration="607000" />
       <workItem from="1609741437880" duration="1784000" />
-      <workItem from="1609743261950" duration="1528000" />
+      <workItem from="1609743261950" duration="1751000" />
     </task>
     <servers />
   </component>
