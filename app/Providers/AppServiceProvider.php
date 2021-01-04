@@ -14,6 +14,7 @@ use Illuminate\Support\ServiceProvider;
 use App\Http\Repositories\CategoryRepo\CategoryRepository;
 use App\Http\Repositories\CategoryRepo\CategoryRepositoryInterface;
 use Illuminate\Database\DatabaseManager;
+use Illuminate\Support\Facades\URL;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -38,6 +39,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-
+        URL::forceScheme('https');
     }
 }
