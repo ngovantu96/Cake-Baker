@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Repositories\ProductRepo\ProductRepository;
 use App\Http\Repositories\ProductRepo\ProductRepositoryInterface;
 use App\Models\Category;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -18,6 +19,11 @@ class HomeController extends Controller
         $productNews = $this->homePoductRepository->getProductNew();
         $categories = Category::all();
         return view('Cakebaker.index',compact('productNews','categories'));
+    }
+
+    public function viewShop()
+    {
+        return view('Cakebaker.shop');
     }
     public function getCakeBaker(){
         $cakeBakers = $this->homePoductRepository->getCakeBaker();
@@ -37,5 +43,10 @@ class HomeController extends Controller
         return view('Cakebaker.product-detail',compact('product','cakeBakers'));
     }
 
-
+    public function search(Request $request)
+    {
+        $search = $request->search;
+        $results = Product::where('name','like',"%$search%")->get();
+        return view('Cakebaker.search',compact('results'));   
+    }
 }

@@ -50,7 +50,7 @@
                              data-type="text"
                              data-responsive_offset="on"
                              data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                            <a class="main_btn" href="#">See the recipe</a>
+                            <a class="main_btn" href="#">chi tiết</a>
                         </div>
                     </div>
                 </li>
@@ -101,7 +101,7 @@
                              data-type="text"
                              data-responsive_offset="on"
                              data-frames="[{&quot;delay&quot;:10,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;0&quot;,&quot;from&quot;:&quot;y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;&quot;,&quot;mask&quot;:&quot;x:0px;y:[100%];s:inherit;e:inherit;&quot;,&quot;to&quot;:&quot;o:1;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;},{&quot;delay&quot;:&quot;wait&quot;,&quot;speed&quot;:1500,&quot;frame&quot;:&quot;999&quot;,&quot;to&quot;:&quot;y:[175%];&quot;,&quot;mask&quot;:&quot;x:inherit;y:inherit;s:inherit;e:inherit;&quot;,&quot;ease&quot;:&quot;Power2.easeInOut&quot;}]">
-                            <a class="main_btn" href="#">See the recipe</a>
+                            <a class="main_btn" href="#">chi tiết</a>
                         </div>
                     </div>
                 </li>
@@ -145,7 +145,7 @@
                         <div class="cake_feature_item">
                            <a href="{{ route('product-detail',$productNew->id) }}">
                                <div class="cake_img">
-                                   <img src="{{ asset('storage/'.substr($productNew->image_product,7)) }}" alt="">
+                                   <img src="{{ asset('storage/'.substr($productNew->image_product,7)) }}" alt="" width="253px" height="200px">
                                </div>
                            </a>
                             <div class="cake_text">
@@ -223,47 +223,47 @@
         <div class="discover_menu_inner">
             <div class="container">
                 <div class="main_title">
-                    <h2>Các Loại Bánh</h2>
+                    <h2>Bánh Nổi Bật</h2>
                     <h5>Lựa chọn một loại bánh phù hợp để thưởng thức...</h5>
                 </div>
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="discover_item_inner">
                             <div class="discover_item">
-                                <h4>Double Chocolate Pie</h4>
-                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>$8.99</span></p>
+                                <h4>Bánh Cupcake-01</h4>
+                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Double Chocolate Pie</h4>
-                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>$8.99</span></p>
+                                <h4>Bánh Cupcake-02</h4>
+                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Double Chocolate Pie</h4>
-                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>$8.99</span></p>
+                                <h4>Bánh Cupcake-03</h4>
+                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Double Chocolate Pie</h4>
-                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>$8.99</span></p>
+                                <h4>Bánh Cupcake-04</h4>
+                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-lg-6">
                         <div class="discover_item_inner">
                             <div class="discover_item">
-                                <h4>Double Chocolate Pie</h4>
-                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>$8.99</span></p>
+                                <h4>Bánh Cupcake-05</h4>
+                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Double Chocolate Pie</h4>
-                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>$8.99</span></p>
+                                <h4>Bánh Cupcake-06</h4>
+                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Double Chocolate Pie</h4>
-                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>$8.99</span></p>
+                                <h4>Bánh Cupcake-07</h4>
+                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                             <div class="discover_item">
-                                <h4>Double Chocolate Pie</h4>
-                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>$8.99</span></p>
+                                <h4>Bánh Cupcake-08</h4>
+                                <p>Chocolate puding, vanilla, fruite rasberry jam milk <span>20,000đ</span></p>
                             </div>
                         </div>
                     </div>
@@ -289,7 +289,7 @@
                             </div>
                             <div class="media-body">
                                 <p>Cake-Baker Không làm bạn thất vọng. Những chiếc bánh rất ngon và đúng mùi vị mà tôi thích.</p>
-                                <h5>Toàn Nguyễn</h5>
+                                <h5>Tùng Nguyễn</h5>
                             </div>
                         </div>
                     </div>
@@ -368,10 +368,4 @@
         </div>
     </section>
     <!--================End Latest News Area =================-->
-
-
-
-
-
-
 @endsection

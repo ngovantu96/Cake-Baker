@@ -75,7 +75,7 @@
 {{--                            </ul>--}}
                         </li>
                         <li class="dropdown submenu">
-                            <a  href="">Đơn Hàng Của Bạn</a>
+                            <a  href="{{ route('shop') }}">Shop</a>
                         </li>
                         <li><a href="">Liên Hệ</a></li>
                     </ul>

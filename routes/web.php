@@ -32,6 +32,7 @@ use Illuminate\Support\Facades\Route;
 Route::prefix('cake-baker')->group(function(){
     //trang chu
     Route::get('/', [HomeController::class,'getProductNew'])->name('home');
+    Route::get('/shop', [HomeController::class,'viewShop'])->name('shop');
     Route::get('/banh-cake-baker', [HomeController::class,'getCakeBaker'])->name('cake-baker');
     Route::get('/banh-sinh-nhat', [HomeController::class,'getBirthDay'])->name('birth-day');
     Route::get('/cac-loai-banh', [HomeController::class,'getChopped'])->name('chopped');
@@ -44,27 +45,11 @@ Route::prefix('cake-baker')->group(function(){
 //    check out
     Route::get('/thong-tin-mua-hang',[CheckOutController::class,'showCheckOut'])->name('show.check-out');
     Route::post('/thanh-toan',[CheckOutController::class,'createOrder'])->name('order.payment');
+    //search
+    Route::post('/tim-kiem-san-pham', [HomeController::class,'search'])->name('search');
 
 
 
-});
-;
-Route::get('/product-detail',function(){
-   return view('page.product-detail');
-});
-Route::get('/cart',function(){
-    return view('page.cart');
-});
-
-Route::get('/check-out',function(){
-    return view('page.check-out');
-});
-Route::get('/order-detail',function(){
-    return view('page.order-detail');
-});
-
-Route::get('/order',function(){
-    return view('admin.order.list');
 });
 
 

@@ -4607,7 +4607,7 @@ i:before {
 }
 
 .search_area .search_box_inner {
-  background: #1a1a1c;
+  background: #f195b2;
   padding: 100px 60px;
   display: block;
   overflow: hidden;
@@ -4618,7 +4618,7 @@ i:before {
   font-family: "Playfair Display", serif;
   font-size: 22px;
   text-transform: uppercase;
-  color: #fff;
+  color: black;
   letter-spacing: .48px;
 }
 
