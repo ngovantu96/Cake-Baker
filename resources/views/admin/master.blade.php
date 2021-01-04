@@ -20,13 +20,13 @@
     <!-- JQVMap -->
     <link rel="stylesheet" href="/asset/AdminLTE/plugins/jqvmap/jqvmap.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="assets/AdminLTE/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/assets/AdminLTE/dist/css/adminlte.min.css">
     <!-- overlayScrollbars -->
-    <link rel="stylesheet" href="assets/AdminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+    <link rel="stylesheet" href="/assets/AdminLTE/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
     <!-- Daterange picker -->
-    <link rel="stylesheet" href=" assets/AdminLTE/plugins/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="/assets/AdminLTE/plugins/daterangepicker/daterangepicker.css">
     <!-- summernote -->
-    <link rel="stylesheet" href="assets/AdminLTE/plugins/summernote/summernote-bs4.min.css">
+    <link rel="stylesheet" href="/assets/AdminLTE/plugins/summernote/summernote-bs4.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA==" crossorigin="anonymous" />
 
@@ -48,9 +48,9 @@
 </div>
 
 <!-- jQuery -->
-<script src="assets/AdminLTE/plugins/jquery/jquery.min.js"></script>
+<script src="/assets/AdminLTE/plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
-<script src="assets/AdminLTE/plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="/assets/AdminLTE/plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
 <script>
     $.widget.bridge('uibutton', $.ui.button);
