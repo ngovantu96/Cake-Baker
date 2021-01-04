@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 //Route::get('/', function () {
 //    return view('welcome');
 //});
-Route::prefix('cake-baker')->group(function(){
+
     //trang chu
     Route::get('/', [HomeController::class,'getProductNew'])->name('home');
     Route::get('/shop', [HomeController::class,'viewShop'])->name('shop');
@@ -48,9 +48,6 @@ Route::prefix('cake-baker')->group(function(){
     //search
     Route::post('/tim-kiem-san-pham', [HomeController::class,'search'])->name('search');
 
-
-
-});
 
 
 
