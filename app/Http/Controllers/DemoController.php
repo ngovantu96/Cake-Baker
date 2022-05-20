@@ -8,6 +8,10 @@ class DemoController extends Controller
     public function index(){
 
     }
+    public function destroy()
+    {
+
+    }
 
     public function create()
     {
@@ -15,6 +19,6 @@ class DemoController extends Controller
     }
     public function update()
     {
-        
+
     }
 }
