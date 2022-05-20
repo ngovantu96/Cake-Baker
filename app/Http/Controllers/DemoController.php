@@ -21,4 +21,9 @@ class DemoController extends Controller
     {
 
     }
+
+    public function detail()
+    {
+
+    }
 }
