@@ -11,12 +11,13 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     private $homePoductRepository;
-    public function __construct(ProductRepositoryInterface $homePoductRepository)
+    public function __construct(ProductRepository $homePoductRepository)
     {
         $this->homePoductRepository = $homePoductRepository;
     }
     public function getProductNew(){
         $productNews = $this->homePoductRepository->getProductNew();
+        // dd($productNews);
         $categories = Category::all();
         return view('Cakebaker.index',compact('productNews','categories'));
     }
@@ -47,6 +48,6 @@ class HomeController extends Controller
     {
         $search = $request->search;
         $results = Product::where('name','like',"%$search%")->get();
-        return view('Cakebaker.search',compact('results'));   
+        return view('Cakebaker.search',compact('results'));
     }
 }

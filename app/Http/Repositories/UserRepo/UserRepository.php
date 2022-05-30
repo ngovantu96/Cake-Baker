@@ -37,4 +37,10 @@ class UserRepository extends BaseRepository implements UserRepositoryInterface
 
         $obj->save();
     }
+
+    public function getDateClientForBill()
+    {
+        $qb = $this->model->createQueryBuilder('q');
+       return $qb;
+    }
 }

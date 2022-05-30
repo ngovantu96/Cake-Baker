@@ -20,4 +20,11 @@ class BaseRepository implements RepositoryInterface {
     public function delete($id){
         return $this->model->where('id',$id)->delete();
     }
+
+    public function createQueryBuilder($alias, $indexBy = null)
+    {
+        return $this->model->createQueryBuilder()
+            ->select($alias)
+            ->from($this->_entityName, $alias, $indexBy);
+    }
 }

@@ -1,0 +1,18 @@
+Index: app/Http/Controllers/DemoController.php
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?php\r\n\r\nnamespace App\\Http\\Controllers;\r\n\r\n\r\nclass DemoController extends Controller\r\n{\r\n    public function index(){\r\n\r\n    }\r\n\r\n    public function create()\r\n    {\r\n\r\n    }\r\n    public function update()\r\n    {\r\n        \r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/Http/Controllers/DemoController.php b/app/Http/Controllers/DemoController.php
+--- a/app/Http/Controllers/DemoController.php	(revision 855ab5c2bb65bd3fb7cc78841456cd8762f0b396)
++++ b/app/Http/Controllers/DemoController.php	(date 1653035900092)
+@@ -15,6 +15,6 @@
+     }
+     public function update()
+     {
+-        
++
+     }
+ }
