@@ -23,9 +23,9 @@ class DemoController extends Controller
 
     }
 
-    public function detail()
+    public function detail($id)
     {
-
+        return $id;
 
     }
 }
