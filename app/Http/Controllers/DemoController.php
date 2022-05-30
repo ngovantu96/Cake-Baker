@@ -13,7 +13,7 @@ class DemoController extends Controller
     }
     public function destroy()
     {
-
+        return "hello mọi người";
     }
 
     public function create()
