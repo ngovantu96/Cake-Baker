@@ -20,9 +20,9 @@ class DemoController extends Controller
     {
         $user = new User();
     }
-    public function update()
+    public function update($id)
     {
-
+        return $id;
     }
 
     public function detail($id)
