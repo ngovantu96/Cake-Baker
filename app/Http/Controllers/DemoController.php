@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\User;
+
 class DemoController extends Controller
 {
     public function index(){
@@ -16,7 +18,7 @@ class DemoController extends Controller
 
     public function create()
     {
-
+        $user = new User();
     }
     public function update()
     {
