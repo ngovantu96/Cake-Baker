@@ -18,9 +18,9 @@ class DemoController extends Controller
     {
 
     }
-    public function update()
+    public function update($id)
     {
-
+        return $id;
     }
 
     public function detail($id)
