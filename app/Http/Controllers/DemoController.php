@@ -30,4 +30,9 @@ class DemoController extends Controller
         return $id;
 
     }
+
+
+    public function show(){
+
+    }
 }
