@@ -9,7 +9,8 @@ class AppController extends Controller {
         $a = 10;
         $c = 50;
         $f =30;
-        return $a;
+        $d = $a + $c + $f;
+        return $d;
     }
     public function create(){
         echo '456heh';
