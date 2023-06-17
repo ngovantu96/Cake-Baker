@@ -7,7 +7,9 @@ class AppController extends Controller {
 
     public function index(){
         $a = 10;
-        return $a;
+        $b = 30;
+        $c = $a + $b;
+        return $c;
     }
     public function create(){
         echo '456heh';
