@@ -52,4 +52,8 @@ class Cart {
 
 
     }
+
+    public function addItem($id) {
+        return $this->DeleteCart($id);
+    }
 }
