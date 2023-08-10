@@ -14,4 +14,8 @@ class AppController extends Controller {
     public function create(){
         echo '456heh';
     }
+
+    private function edit($id) {
+        echo $id;
+    }
 }
